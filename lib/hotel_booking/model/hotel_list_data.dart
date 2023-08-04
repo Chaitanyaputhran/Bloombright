@@ -19,7 +19,7 @@ class HotelListData {
 
   static List<HotelListData> hotelList = <HotelListData>[
     HotelListData(
-      imagePath: 'assets/hotel/hotel_1.png',
+      imagePath: 'assets/hotel/gif_calender.gif',
       titleTxt: 'My Caleder',
 
     ),
