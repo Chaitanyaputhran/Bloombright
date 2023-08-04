@@ -20,12 +20,8 @@ class HotelListData {
   static List<HotelListData> hotelList = <HotelListData>[
     HotelListData(
       imagePath: 'assets/hotel/hotel_1.png',
-      titleTxt: 'Grand Royal Hotel',
-      subTxt: 'Wembley, London',
-      dist: 2.0,
-      reviews: 80,
-      rating: 4.4,
-      perNight: 180,
+      titleTxt: 'My Caleder',
+
     ),
 
   ];
