@@ -1,7 +1,9 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
+import '../../fitness_app/fitness_app_home_screen.dart';
 import '../../hotel_booking/hotel_home_screen.dart';
 import 'calender_page.dart';
+
 
 
 class CenterNextButton extends StatelessWidget {
@@ -102,7 +104,7 @@ class CenterNextButton extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => HotelHomeScreen()),
+                                builder: (context) => FitnessAppHomeScreen()),
                           );
                           child:
                           Padding(
