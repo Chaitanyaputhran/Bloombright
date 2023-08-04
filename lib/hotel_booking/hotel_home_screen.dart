@@ -85,74 +85,161 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                     animation: animation,
                                     animationController: animationController!,
                                   ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      boxShadow: <BoxShadow>[
-                                        BoxShadow(
-                                            color: Colors.white,
-                                            offset: const Offset(1.1, 4.0),
-                                            blurRadius: 8.0),
-                                      ],
-                                      gradient: LinearGradient(
-                                        colors: [
-                                          Color(0xFFF3A5160),
-                                          Color(0xFFF3A5160),
-                                        ],
-                                        begin: Alignment.topLeft,
-                                        end: Alignment.bottomRight,
+                                  SizedBox(
+                                    height: 25,
+                                  ),
+                                  FractionallySizedBox(
+                                    widthFactor:
+                                        0.85, // Increase the width by 20%
+                                    child: ElevatedButton(
+                                      onPressed: () {
+                                        // Add the onPressed function here
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        elevation: 8.0,
+                                        primary: Color(
+                                            0xFFF80F5BFFF), // Set the gradient colors here
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.only(
+                                            bottomRight: Radius.circular(8.0),
+                                            bottomLeft: Radius.circular(8.0),
+                                            topLeft: Radius.circular(54.0),
+                                            topRight: Radius.circular(54.0),
+                                          ),
+                                        ),
                                       ),
-                                      borderRadius: const BorderRadius.only(
-                                        bottomRight: Radius.circular(8.0),
-                                        bottomLeft: Radius.circular(8.0),
-                                        topLeft: Radius.circular(8.0),
-                                        topRight: Radius.circular(54.0),
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 24,
+                                            left: 16,
+                                            right: 16,
+                                            bottom: 8),
+                                        child: Text(
+                                          'Click Me', // Add the desired text here
+                                          style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 54,
-                                          left: 16,
-                                          right: 16,
-                                          bottom: 8),
+                                  ),
+                                  FractionallySizedBox(
+                                    widthFactor:
+                                    0.85, // Increase the width by 20%
+                                    child: ElevatedButton(
+                                      onPressed: () {
+                                        // Add the onPressed function here
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        elevation: 8.0,
+                                        primary: Color(
+                                            0xFFF80C5BFFF), // Set the gradient colors here
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.only(
+                                            bottomRight: Radius.circular(8.0),
+                                            bottomLeft: Radius.circular(8.0),
+                                            topLeft: Radius.circular(54.0),
+                                            topRight: Radius.circular(54.0),
+                                          ),
+                                        ),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 24,
+                                            left: 16,
+                                            right: 16,
+                                            bottom: 8),
+                                        child: Text(
+                                          'Click Me', // Add the desired text here
+                                          style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  FractionallySizedBox(
+                                    widthFactor:
+                                    0.85, // Increase the width by 20%
+                                    child: ElevatedButton(
+                                      onPressed: () {
+                                        // Add the onPressed function here
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        elevation: 8.0,
+                                        primary: Color(
+                                            0xFFF80F5BFFF), // Set the gradient colors here
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.only(
+                                            bottomRight: Radius.circular(8.0),
+                                            bottomLeft: Radius.circular(8.0),
+                                            topLeft: Radius.circular(54.0),
+                                            topRight: Radius.circular(54.0),
+                                          ),
+                                        ),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 24,
+                                            left: 16,
+                                            right: 16,
+                                            bottom: 8),
+                                        child: Text(
+                                          'Click Me', // Add the desired text here
+                                          style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                  FractionallySizedBox(
+                                    widthFactor:
+                                    0.85, // Increase the width by 20%
+                                    child: ElevatedButton(
+                                      onPressed: () {
+                                        // Add the onPressed function here
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        elevation: 8.0,
+                                        primary: Color(
+                                            0xFFF80C5BFFF), // Set the gradient colors here
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.only(
+                                            bottomRight: Radius.circular(8.0),
+                                            bottomLeft: Radius.circular(8.0),
+                                            topLeft: Radius.circular(54.0),
+                                            topRight: Radius.circular(54.0),
+                                          ),
+                                        ),
+                                      ),
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 24,
+                                            left: 16,
+                                            right: 16,
+                                            bottom: 8),
+                                        child: Text(
+                                          'Click Me', // Add the desired text here
+                                          style: TextStyle(
+                                            fontSize: 25,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ],
                               );
                             }).toList(),
                           ),
-                        ),
-                      ),
-                    ),
-                    Card(
-                      elevation: 8,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(8.0),
-                          bottomLeft: Radius.circular(8.0),
-                          topLeft: Radius.circular(8.0),
-                          topRight: Radius.circular(54.0),
-                        ),
-                      ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color(0xFFF3A5160),
-                              Color(0xFFF3A5160),
-                            ],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                          ),
-                          borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(8.0),
-                            bottomLeft: Radius.circular(8.0),
-                            topLeft: Radius.circular(8.0),
-                            topRight: Radius.circular(54.0),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                              top: 54, left: 16, right: 16, bottom: 8),
                         ),
                       ),
                     ),
