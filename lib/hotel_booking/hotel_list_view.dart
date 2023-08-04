@@ -107,10 +107,6 @@ class _HotelListViewState extends State<HotelListView> {
                                                 fontSize: 22,
                                               ),
                                             ),
-<<<<<<< HEAD
-
-
-=======
                                             Row(
                                               crossAxisAlignment: CrossAxisAlignment.center,
                                               mainAxisAlignment: MainAxisAlignment.start,
@@ -170,7 +166,6 @@ class _HotelListViewState extends State<HotelListView> {
                                                 ],
                                               ),
                                             ),
->>>>>>> 4734d7bda1f0abc089444e8e7186969959895629
                                           ],
                                         ),
                                       ),
@@ -182,9 +177,6 @@ class _HotelListViewState extends State<HotelListView> {
                                       mainAxisAlignment: MainAxisAlignment.center,
                                       crossAxisAlignment: CrossAxisAlignment.end,
                                       children: <Widget>[
-<<<<<<< HEAD
-
-=======
                                         Text(
                                           '\$${widget.hotelData!.perNight}',
                                           textAlign: TextAlign.left,
@@ -197,7 +189,6 @@ class _HotelListViewState extends State<HotelListView> {
                                           '/per night',
                                           style: TextStyle(fontSize: 14, color: Colors.grey.withOpacity(0.8)),
                                         ),
->>>>>>> 4734d7bda1f0abc089444e8e7186969959895629
                                       ],
                                     ),
                                   ),
