@@ -250,17 +250,7 @@ class _TrainingScreenState extends State<TrainingScreen>
                                       size: 18,
                                     ),
                                   ),
-                                  Text(
-                                    '15 May',
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                      fontFamily: FitnessAppTheme.fontName,
-                                      fontWeight: FontWeight.normal,
-                                      fontSize: 18,
-                                      letterSpacing: -0.2,
-                                      color: FitnessAppTheme.darkerText,
-                                    ),
-                                  ),
+
                                 ],
                               ),
                             ),
