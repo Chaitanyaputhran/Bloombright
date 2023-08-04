@@ -8,7 +8,6 @@ import 'filters_screen.dart';
 import 'hotel_app_theme.dart';
 
 class HotelHomeScreen extends StatefulWidget {
-
   @override
   _HotelHomeScreenState createState() => _HotelHomeScreenState();
 }
@@ -61,31 +60,99 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                     getAppBarUI(),
                     Expanded(
                       child: Container(
-                        color:
-                        HotelAppTheme.buildLightTheme().backgroundColor,
+                        color: HotelAppTheme.buildLightTheme().backgroundColor,
                         child: Padding(
                           padding: const EdgeInsets.only(top: 8),
                           child: Column(
                             children: hotelList.asMap().entries.map((entry) {
                               final int count =
-                              hotelList.length > 10 ? 10 : hotelList.length;
+                                  hotelList.length > 10 ? 10 : hotelList.length;
                               final int index = entry.key;
                               final Animation<double> animation =
-                              Tween<double>(begin: 0.0, end: 1.0).animate(
-                                  CurvedAnimation(
-                                      parent: animationController!,
-                                      curve: Interval(
-                                          (1 / count) * index, 1.0,
-                                          curve: Curves.fastOutSlowIn)));
+                                  Tween<double>(begin: 0.0, end: 1.0).animate(
+                                      CurvedAnimation(
+                                          parent: animationController!,
+                                          curve: Interval(
+                                              (1 / count) * index, 1.0,
+                                              curve: Curves.fastOutSlowIn)));
                               animationController?.forward();
-                              return HotelListView(
-                                callback: () {},
-                                hotelData: entry.value,
-                                animation: animation,
-                                animationController: animationController!,
+                              return Column(
+                                children: [
+                                  // Specify the desired height for the card
+                                  HotelListView(
+                                    callback: () {},
+                                    hotelData: entry.value,
+                                    animation: animation,
+                                    animationController: animationController!,
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      boxShadow: <BoxShadow>[
+                                        BoxShadow(
+                                            color: Colors.white,
+                                            offset: const Offset(1.1, 4.0),
+                                            blurRadius: 8.0),
+                                      ],
+                                      gradient: LinearGradient(
+                                        colors: [
+                                          Color(0xFFF3A5160),
+                                          Color(0xFFF3A5160),
+                                        ],
+                                        begin: Alignment.topLeft,
+                                        end: Alignment.bottomRight,
+                                      ),
+                                      borderRadius: const BorderRadius.only(
+                                        bottomRight: Radius.circular(8.0),
+                                        bottomLeft: Radius.circular(8.0),
+                                        topLeft: Radius.circular(8.0),
+                                        topRight: Radius.circular(54.0),
+                                      ),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          top: 54,
+                                          left: 16,
+                                          right: 16,
+                                          bottom: 8),
+                                    ),
+                                  ),
+                                ],
                               );
                             }).toList(),
                           ),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      elevation: 8,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(8.0),
+                          bottomLeft: Radius.circular(8.0),
+                          topLeft: Radius.circular(8.0),
+                          topRight: Radius.circular(54.0),
+                        ),
+                      ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Color(0xFFF3A5160),
+                              Color(0xFFF3A5160),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.only(
+                            bottomRight: Radius.circular(8.0),
+                            bottomLeft: Radius.circular(8.0),
+                            topLeft: Radius.circular(8.0),
+                            topRight: Radius.circular(54.0),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                              top: 54, left: 16, right: 16, bottom: 8),
                         ),
                       ),
                     ),
