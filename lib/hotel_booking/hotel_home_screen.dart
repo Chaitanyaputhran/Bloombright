@@ -8,7 +8,6 @@ import 'filters_screen.dart';
 import 'hotel_app_theme.dart';
 
 class HotelHomeScreen extends StatefulWidget {
-
   @override
   _HotelHomeScreenState createState() => _HotelHomeScreenState();
 }
