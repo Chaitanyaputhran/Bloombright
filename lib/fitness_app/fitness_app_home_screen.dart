@@ -76,52 +76,51 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
         const Expanded(
           child: SizedBox(),
         ),
-        BottomBarView(
-          tabIconsList: tabIconsList,
-          addClick: () {},
-          changeIndex: (int index) {
-            if (index == 0 ) {
-              animationController?.reverse().then<dynamic>((data) {
-                if (!mounted) {
-                  return;
-                }
-                setState(() {
-                  tabBody =
-                      HotelHomeScreen();
+        Container( // or Expanded
+          color: Color(0xffF7EBE1), // Set the background color here
+          child: BottomBarView(
+            tabIconsList: tabIconsList,
+            addClick: () {},
+            changeIndex: (int index) {
+              if (index == 0) {
+                animationController?.reverse().then<dynamic>((data) {
+                  if (!mounted) {
+                    return;
+                  }
+                  setState(() {
+                    tabBody = HotelHomeScreen();
+                  });
                 });
-              });
-            } else if (index == 1) {
-              animationController?.reverse().then<dynamic>((data) {
-                if (!mounted) {
-                  return;
-                }
-                setState(() {
-                  tabBody =
-                      TrainingScreen(animationController: animationController);
+              } else if (index == 1) {
+                animationController?.reverse().then<dynamic>((data) {
+                  if (!mounted) {
+                    return;
+                  }
+                  setState(() {
+                    tabBody = TrainingScreen(animationController: animationController);
+                  });
                 });
-              });
-            } else if (index == 2) {
-              animationController?.reverse().then<dynamic>((data) {
-                if (!mounted) {
-                  return;
-                }
-                setState(() {
-                  tabBody =
-                      MyDiaryScreen(animationController: animationController);
+              } else if (index == 2) {
+                animationController?.reverse().then<dynamic>((data) {
+                  if (!mounted) {
+                    return;
+                  }
+                  setState(() {
+                    tabBody = MyDiaryScreen(animationController: animationController);
+                  });
                 });
-              });
-            } else if (index == 3) {
-              animationController?.reverse().then<dynamic>((data) {
-                if (!mounted) {
-                  return;
-                }
-                setState(() {
-                  tabBody =
-                      TrainingScreen(animationController: animationController);
+              } else if (index == 3) {
+                animationController?.reverse().then<dynamic>((data) {
+                  if (!mounted) {
+                    return;
+                  }
+                  setState(() {
+                    tabBody = TrainingScreen(animationController: animationController);
+                  });
                 });
-              });
-            }
-          },
+              }
+            },
+          ),
         ),
       ],
     );

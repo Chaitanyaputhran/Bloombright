@@ -45,6 +45,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
       data: HotelAppTheme.buildLightTheme(),
       child: Container(
         child: Scaffold(
+          backgroundColor: Color(0xffF7EBE1),
           body: Stack(
             children: <Widget>[
               InkWell(
@@ -60,7 +61,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                     getAppBarUI(),
                     Expanded(
                       child: Container(
-                        color: HotelAppTheme.buildLightTheme().backgroundColor,
+                        color: Color(0xffF7EBE1),
                         child: Padding(
                           padding: const EdgeInsets.only(top: 8),
                           child: Column(
@@ -78,6 +79,9 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                               animationController?.forward();
                               return Column(
                                 children: [
+                                  SizedBox(
+                                    height: 25,
+                                  ),
                                   // Specify the desired height for the card
                                   HotelListView(
                                     callback: () {},
@@ -266,7 +270,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
               color: HotelAppTheme.buildLightTheme().backgroundColor,
               boxShadow: <BoxShadow>[
                 BoxShadow(
-                    color: Colors.grey.withOpacity(0.2),
+                    color: Color(0xffF7EBE1),
                     offset: const Offset(0, -2),
                     blurRadius: 8.0),
               ],
@@ -274,7 +278,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
           ),
         ),
         Container(
-          color: HotelAppTheme.buildLightTheme().backgroundColor,
+          color: Color(0xffF7EBE1),
           child: Padding(
             padding:
                 const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 4),
@@ -360,7 +364,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
   Widget getAppBarUI() {
     return Container(
       decoration: BoxDecoration(
-        color: HotelAppTheme.buildLightTheme().backgroundColor,
+        color: Color(0xffF7EBE1),
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),
