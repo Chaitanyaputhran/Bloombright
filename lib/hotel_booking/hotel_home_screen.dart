@@ -1,6 +1,7 @@
 import 'package:best_flutter_ui_templates/hotel_booking/calendar_popup_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/hotel_list_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/model/hotel_list_data.dart';
+import 'package:best_flutter_ui_templates/hotel_booking/model/notes.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'filters_screen.dart';
@@ -67,16 +68,17 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                             controller: _scrollController,
                             child: Column(
                               children: hotelList.asMap().entries.map((entry) {
-                                final int count =
-                                hotelList.length > 10 ? 10 : hotelList.length;
+                                final int count = hotelList.length > 10
+                                    ? 10
+                                    : hotelList.length;
                                 final int index = entry.key;
                                 final Animation<double> animation =
-                                Tween<double>(begin: 0.0, end: 1.0).animate(
-                                    CurvedAnimation(
-                                        parent: animationController!,
-                                        curve: Interval(
-                                            (1 / count) * index, 1.0,
-                                            curve: Curves.fastOutSlowIn)));
+                                    Tween<double>(begin: 0.0, end: 1.0).animate(
+                                        CurvedAnimation(
+                                            parent: animationController!,
+                                            curve: Interval(
+                                                (1 / count) * index, 1.0,
+                                                curve: Curves.fastOutSlowIn)));
                                 animationController?.forward();
                                 return Column(
                                   children: [
@@ -105,15 +107,19 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                             elevation: 8.0,
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.only(
-                                                bottomRight: Radius.circular(54.0),
-                                                bottomLeft: Radius.circular(54.0),
+                                                bottomRight:
+                                                    Radius.circular(54.0),
+                                                bottomLeft:
+                                                    Radius.circular(54.0),
                                                 topLeft: Radius.circular(54.0),
                                                 topRight: Radius.circular(54.0),
                                               ),
                                             ),
-                                            color: Colors.white, // Set the gradient colors here
+                                            color: Colors
+                                                .white, // Set the gradient colors here
                                             child: Padding(
-                                              padding: const EdgeInsets.all(8.0),
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
                                               child: Text(
                                                 'Click Me', // Add the desired text here
                                                 style: TextStyle(
@@ -135,15 +141,19 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                             elevation: 8.0,
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.only(
-                                                bottomRight: Radius.circular(54.0),
-                                                bottomLeft: Radius.circular(54.0),
+                                                bottomRight:
+                                                    Radius.circular(54.0),
+                                                bottomLeft:
+                                                    Radius.circular(54.0),
                                                 topLeft: Radius.circular(54.0),
                                                 topRight: Radius.circular(54.0),
                                               ),
                                             ),
-                                            color: Colors.white, // Set the gradient colors here
+                                            color: Colors
+                                                .white, // Set the gradient colors here
                                             child: Padding(
-                                              padding: const EdgeInsets.all(8.0),
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
                                               child: Text(
                                                 'Click Me', // Add the desired text here
                                                 style: TextStyle(
@@ -164,11 +174,15 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                       height: 20,
                                     ),
                                     FractionallySizedBox(
-                                      widthFactor:
-                                      0.85,
+                                      widthFactor: 0.85,
                                       child: ElevatedButton(
                                         onPressed: () {
-                                          // Add the onPressed function here
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    NotesPage()),
+                                          );
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
@@ -190,7 +204,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                               right: 16,
                                               bottom: 8),
                                           child: Text(
-                                            'Click Me', // Add the desired text here
+                                            'Notes', // Add the desired text here
                                             style: TextStyle(
                                               fontSize: 25,
                                               fontWeight: FontWeight.bold,
@@ -202,7 +216,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                     ),
                                     FractionallySizedBox(
                                       widthFactor:
-                                      0.85, // Increase the width by 20%
+                                          0.85, // Increase the width by 20%
                                       child: ElevatedButton(
                                         onPressed: () {
                                           // Add the onPressed function here
@@ -239,7 +253,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                     ),
                                     FractionallySizedBox(
                                       widthFactor:
-                                      0.85, // Increase the width by 20%
+                                          0.85, // Increase the width by 20%
                                       child: ElevatedButton(
                                         onPressed: () {
                                           // Add the onPressed function here
@@ -276,7 +290,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                     ),
                                     FractionallySizedBox(
                                       widthFactor:
-                                      0.85, // Increase the width by 20%
+                                          0.85, // Increase the width by 20%
                                       child: ElevatedButton(
                                         onPressed: () {
                                           // Add the onPressed function here
@@ -353,7 +367,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
           color: Color(0xffF7EBE1),
           child: Padding(
             padding:
-            const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 4),
+                const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 4),
             child: Row(
               children: <Widget>[
                 Material(
@@ -512,8 +526,8 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
 
 class ContestTabHeader extends SliverPersistentHeaderDelegate {
   ContestTabHeader(
-      this.searchUI,
-      );
+    this.searchUI,
+  );
   final Widget searchUI;
 
   @override
