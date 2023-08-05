@@ -2,6 +2,7 @@ import 'package:best_flutter_ui_templates/fitness_app/fitness_app_home_screen.da
 import 'package:best_flutter_ui_templates/hotel_booking/provider/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:lottie/lottie.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = 'login-screen';
@@ -22,7 +23,8 @@ class _LoginScreenState extends State<LoginScreen> {
         ctx: context,
         email: userController.text,
         password: passController.text,
-        isLogin: true, userName: '',
+        isLogin: true,
+        userName: '',
       );
       print(userController.text);
     } else {}
@@ -32,16 +34,27 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login Screen"),
+        title: Text(
+          "Login Screen",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 25,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        elevation: 0.0,
+        backgroundColor: Color(0xffF7EBE1),
       ),
+      backgroundColor: Color(0xffF7EBE1),
       body: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(height: 10),
             Container(
               height: 300,
-              child: Image.asset(
-                'assets/images/my_password_d6kg.svg',
+              width: double.maxFinite,
+              child: Lottie.asset(
+                'assets/images/animation_lkyar3r1.json', // Replace with the path to your Lottie animation file
                 fit: BoxFit.cover,
               ),
             ),
@@ -78,12 +91,15 @@ class _LoginScreenState extends State<LoginScreen> {
                           ? CircularProgressIndicator()
                           : ElevatedButton(
                               onPressed: () {
-                                onSaved(context);
-                                Navigator.of(context)
-                                     .pushNamed(FitnessAppHomeScreen() as String);
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          FitnessAppHomeScreen()),
+                                );
                               },
                               child: Text('Login'),
-                            ),
+                            )
                     ],
                   ),
                 ),

@@ -1,5 +1,6 @@
 import 'package:best_flutter_ui_templates/hotel_booking/provider/auth_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import './details.dart';
 import 'dart:core';
@@ -18,7 +19,8 @@ class CreateScreen extends StatelessWidget {
         ctx: context,
         email: usernameController.text,
         password: passwordController.text,
-        isLogin: false, userName: '',
+        isLogin: false,
+        userName: '',
       );
       Navigator.of(context).pushNamed(DetailScreen.routeName);
     } else {}
@@ -29,9 +31,18 @@ class CreateScreen extends StatelessWidget {
     // final bool sas = usernameController.text.isEmpty;
     return Scaffold(
         appBar: AppBar(
-          title: Text(" SignUp"),
-          backgroundColor: Colors.blueGrey,
+          title: Text(
+            " SignUp",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 25,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          elevation: 0.0,
+          backgroundColor: Color(0xffF7EBE1),
         ),
+        backgroundColor: Color(0xffF7EBE1),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -39,8 +50,9 @@ class CreateScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Container(
                   height: 250,
-                  child: Image.asset(
-                    'assets/images/medicine_b1ol.svg',
+                  width: double.maxFinite,
+                  child: Lottie.asset(
+                    'assets/images/animation_lkyar3r1.json', // Replace with the path to your Lottie animation file
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -98,7 +110,8 @@ class CreateScreen extends StatelessWidget {
                                   );
                                 }
                               },
-                              child: Text('Signup',
+                              child: Text(
+                                'Signup',
                               ),
                             );
                           },
