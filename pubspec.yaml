@@ -33,7 +33,13 @@ dependencies:
     intl: ^0.17.0
     animations: ^2.0.3
     shared_preferences: ^2.2.0
-
+    flutter_screenutil: ^5.3.0
+    url_launcher: ^6.1.9
+    provider: ^6.0.5
+    firebase_core: ^2.15.0
+    cloud_firestore: ^4.8.4
+    firebase_auth: ^4.7.2
+    datetime_picker_formfield_new: ^2.1.0
 
 dev_dependencies:
     flutter_test:
@@ -84,6 +90,11 @@ flutter:
               - asset: assets/fonts/Roboto-Regular.ttf
               - asset: assets/fonts/Roboto-Medium.ttf
                 weight: 400
-    #
+        - family: ProductSans
+          fonts:
+              - asset: assets/fonts/ProductSans-Light.ttf
+              - asset: assets/fonts/ProductSans-Regular.ttf
+              - asset: assets/fonts/ProductSans-Medium.ttf
+              - asset: assets/fonts/ProductSans-Bold.ttf
     # For details regarding fonts from package dependencies,
     # see https://flutter.dev/custom-fonts/#from-packages

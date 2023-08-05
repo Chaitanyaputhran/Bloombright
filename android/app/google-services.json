@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "736684515079",
+    "project_id": "bloombright-e151d",
+    "storage_bucket": "bloombright-e151d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736684515079:android:59e21bff24410cf980afa2",
+        "android_client_info": {
+          "package_name": "com.zenith.bloombright"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736684515079-pka4pcpm1rkk136ff052sigdk8ook34g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgdcZqIsI_1kllSdfXqxB99dfx0xPL6C4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "736684515079-pka4pcpm1rkk136ff052sigdk8ook34g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
