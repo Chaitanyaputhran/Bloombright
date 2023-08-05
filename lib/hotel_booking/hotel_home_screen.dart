@@ -1,11 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/calendar_popup_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/hotel_list_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/model/hotel_list_data.dart';
+import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'filters_screen.dart';
 import 'hotel_app_theme.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class HotelHomeScreen extends StatefulWidget {
   @override
@@ -26,25 +25,11 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
     animationController = AnimationController(
         duration: const Duration(milliseconds: 1000), vsync: this);
     super.initState();
-
-    // Check if it's the first time running the app
-    checkFirstTime();
   }
 
-  Future<void> checkFirstTime() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool isFirstTime = prefs.getBool('first_time') ?? true;
-
-    if (isFirstTime) {
-      // Show the setup dialog
-      await showDialog(
-        context: context,
-        builder: (context) => PeriodSetupDialog(),
-      );
-
-      // Mark as not the first time anymore
-      prefs.setBool('first_time', false);
-    }
+  Future<bool> getData() async {
+    await Future<dynamic>.delayed(const Duration(milliseconds: 200));
+    return true;
   }
 
   @override
@@ -78,186 +63,258 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                         color: Color(0xffF7EBE1),
                         child: Padding(
                           padding: const EdgeInsets.only(top: 8),
-                          child: Column(
-                            children: hotelList.asMap().entries.map((entry) {
-                              final int count =
-                                  hotelList.length > 10 ? 10 : hotelList.length;
-                              final int index = entry.key;
-                              final Animation<double> animation =
-                                  Tween<double>(begin: 0.0, end: 1.0).animate(
-                                      CurvedAnimation(
-                                          parent: animationController!,
-                                          curve: Interval(
-                                              (1 / count) * index, 1.0,
-                                              curve: Curves.fastOutSlowIn)));
-                              animationController?.forward();
-                              return Column(
-                                children: [
-                                  SizedBox(
-                                    height: 25,
-                                  ),
-                                  // Specify the desired height for the card
-                                  HotelListView(
-                                    callback: () {},
-                                    hotelData: entry.value,
-                                    animation: animation,
-                                    animationController: animationController!,
-                                  ),
-                                  SizedBox(
-                                    height: 25,
-                                  ),
-                                  FractionallySizedBox(
-                                    widthFactor:
-                                        0.85, // Increase the width by 20%
-                                    child: ElevatedButton(
-                                      onPressed: () {
-                                        // Add the onPressed function here
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        elevation: 8.0,
-                                        primary: Color(
-                                            0xFFF80F5BFFF), // Set the gradient colors here
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.only(
-                                            bottomRight: Radius.circular(8.0),
-                                            bottomLeft: Radius.circular(8.0),
-                                            topLeft: Radius.circular(54.0),
-                                            topRight: Radius.circular(54.0),
+                          child: SingleChildScrollView(
+                            controller: _scrollController,
+                            child: Column(
+                              children: hotelList.asMap().entries.map((entry) {
+                                final int count =
+                                hotelList.length > 10 ? 10 : hotelList.length;
+                                final int index = entry.key;
+                                final Animation<double> animation =
+                                Tween<double>(begin: 0.0, end: 1.0).animate(
+                                    CurvedAnimation(
+                                        parent: animationController!,
+                                        curve: Interval(
+                                            (1 / count) * index, 1.0,
+                                            curve: Curves.fastOutSlowIn)));
+                                animationController?.forward();
+                                return Column(
+                                  children: [
+                                    SizedBox(
+                                      height: 15,
+                                    ),
+                                    // Specify the desired height for the card
+                                    HotelListView(
+                                      callback: () {},
+                                      hotelData: entry.value,
+                                      animation: animation,
+                                      animationController: animationController!,
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      children: [
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        SizedBox(
+                                          height: 125,
+                                          width: 160,
+                                          child: Card(
+                                            elevation: 8.0,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.only(
+                                                bottomRight: Radius.circular(54.0),
+                                                bottomLeft: Radius.circular(54.0),
+                                                topLeft: Radius.circular(54.0),
+                                                topRight: Radius.circular(54.0),
+                                              ),
+                                            ),
+                                            color: Colors.white, // Set the gradient colors here
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                'Click Me', // Add the desired text here
+                                                style: TextStyle(
+                                                  fontSize: 2,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 24,
-                                            left: 16,
-                                            right: 16,
-                                            bottom: 8),
-                                        child: Text(
-                                          'Click Me', // Add the desired text here
-                                          style: TextStyle(
-                                            fontSize: 25,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        SizedBox(
+                                          height: 125,
+                                          width: 160,
+                                          child: Card(
+                                            elevation: 8.0,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.only(
+                                                bottomRight: Radius.circular(54.0),
+                                                bottomLeft: Radius.circular(54.0),
+                                                topLeft: Radius.circular(54.0),
+                                                topRight: Radius.circular(54.0),
+                                              ),
+                                            ),
+                                            color: Colors.white, // Set the gradient colors here
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(8.0),
+                                              child: Text(
+                                                'Click Me', // Add the desired text here
+                                                style: TextStyle(
+                                                  fontSize: 2,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    FractionallySizedBox(
+                                      widthFactor:
+                                      0.85,
+                                      child: ElevatedButton(
+                                        onPressed: () {
+                                          // Add the onPressed function here
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          elevation: 8.0,
+                                          primary: Color(
+                                              0xFFF80F5BFFF), // Set the gradient colors here
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight: Radius.circular(8.0),
+                                              bottomLeft: Radius.circular(8.0),
+                                              topLeft: Radius.circular(54.0),
+                                              topRight: Radius.circular(54.0),
+                                            ),
+                                          ),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 24,
+                                              left: 16,
+                                              right: 16,
+                                              bottom: 8),
+                                          child: Text(
+                                            'Click Me', // Add the desired text here
+                                            style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  FractionallySizedBox(
-                                    widthFactor:
-                                        0.85, // Increase the width by 20%
-                                    child: ElevatedButton(
-                                      onPressed: () {
-                                        // Add the onPressed function here
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        elevation: 8.0,
-                                        primary: Color(
-                                            0xFFF80C5BFFF), // Set the gradient colors here
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.only(
-                                            bottomRight: Radius.circular(8.0),
-                                            bottomLeft: Radius.circular(8.0),
-                                            topLeft: Radius.circular(54.0),
-                                            topRight: Radius.circular(54.0),
+                                    FractionallySizedBox(
+                                      widthFactor:
+                                      0.85, // Increase the width by 20%
+                                      child: ElevatedButton(
+                                        onPressed: () {
+                                          // Add the onPressed function here
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          elevation: 8.0,
+                                          primary: Color(
+                                              0xFFF80C5BFFF), // Set the gradient colors here
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight: Radius.circular(8.0),
+                                              bottomLeft: Radius.circular(8.0),
+                                              topLeft: Radius.circular(54.0),
+                                              topRight: Radius.circular(54.0),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 24,
-                                            left: 16,
-                                            right: 16,
-                                            bottom: 8),
-                                        child: Text(
-                                          'Click Me', // Add the desired text here
-                                          style: TextStyle(
-                                            fontSize: 25,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  FractionallySizedBox(
-                                    widthFactor:
-                                        0.85, // Increase the width by 20%
-                                    child: ElevatedButton(
-                                      onPressed: () {
-                                        // Add the onPressed function here
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        elevation: 8.0,
-                                        primary: Color(
-                                            0xFFF80F5BFFF), // Set the gradient colors here
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.only(
-                                            bottomRight: Radius.circular(8.0),
-                                            bottomLeft: Radius.circular(8.0),
-                                            topLeft: Radius.circular(54.0),
-                                            topRight: Radius.circular(54.0),
-                                          ),
-                                        ),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 24,
-                                            left: 16,
-                                            right: 16,
-                                            bottom: 8),
-                                        child: Text(
-                                          'Click Me', // Add the desired text here
-                                          style: TextStyle(
-                                            fontSize: 25,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 24,
+                                              left: 16,
+                                              right: 16,
+                                              bottom: 8),
+                                          child: Text(
+                                            'Click Me', // Add the desired text here
+                                            style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  FractionallySizedBox(
-                                    widthFactor:
-                                        0.85, // Increase the width by 20%
-                                    child: ElevatedButton(
-                                      onPressed: () {
-                                        // Add the onPressed function here
-                                      },
-                                      style: ElevatedButton.styleFrom(
-                                        elevation: 8.0,
-                                        primary: Color(
-                                            0xFFF80C5BFFF), // Set the gradient colors here
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.only(
-                                            bottomRight: Radius.circular(8.0),
-                                            bottomLeft: Radius.circular(8.0),
-                                            topLeft: Radius.circular(54.0),
-                                            topRight: Radius.circular(54.0),
+                                    FractionallySizedBox(
+                                      widthFactor:
+                                      0.85, // Increase the width by 20%
+                                      child: ElevatedButton(
+                                        onPressed: () {
+                                          // Add the onPressed function here
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          elevation: 8.0,
+                                          primary: Color(
+                                              0xFFF80F5BFFF), // Set the gradient colors here
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight: Radius.circular(8.0),
+                                              bottomLeft: Radius.circular(8.0),
+                                              topLeft: Radius.circular(54.0),
+                                              topRight: Radius.circular(54.0),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 24,
-                                            left: 16,
-                                            right: 16,
-                                            bottom: 8),
-                                        child: Text(
-                                          'Click Me', // Add the desired text here
-                                          style: TextStyle(
-                                            fontSize: 25,
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 24,
+                                              left: 16,
+                                              right: 16,
+                                              bottom: 8),
+                                          child: Text(
+                                            'Click Me', // Add the desired text here
+                                            style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  // Add more ElevatedButtons here if needed
-                                ],
-                              );
-                            }).toList(),
+                                    FractionallySizedBox(
+                                      widthFactor:
+                                      0.85, // Increase the width by 20%
+                                      child: ElevatedButton(
+                                        onPressed: () {
+                                          // Add the onPressed function here
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          elevation: 8.0,
+                                          primary: Color(
+                                              0xFFF80C5BFFF), // Set the gradient colors here
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight: Radius.circular(8.0),
+                                              bottomLeft: Radius.circular(8.0),
+                                              topLeft: Radius.circular(54.0),
+                                              topRight: Radius.circular(54.0),
+                                            ),
+                                          ),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 24,
+                                              left: 16,
+                                              right: 16,
+                                              bottom: 8),
+                                          child: Text(
+                                            'Click Me', // Add the desired text here
+                                            style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                );
+                              }).toList(),
+                            ),
                           ),
                         ),
                       ),
@@ -296,7 +353,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
           color: Color(0xffF7EBE1),
           child: Padding(
             padding:
-                const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 4),
+            const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 4),
             child: Row(
               children: <Widget>[
                 Material(
@@ -453,56 +510,26 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
   }
 }
 
-class PeriodSetupDialog extends StatefulWidget {
-  @override
-  _PeriodSetupDialogState createState() => _PeriodSetupDialogState();
-}
-
-class _PeriodSetupDialogState extends State<PeriodSetupDialog> {
-  TextEditingController cycleDaysController = TextEditingController();
-  TextEditingController startDateController = TextEditingController();
+class ContestTabHeader extends SliverPersistentHeaderDelegate {
+  ContestTabHeader(
+      this.searchUI,
+      );
+  final Widget searchUI;
 
   @override
-  Widget build(BuildContext context) {
-    return AlertDialog(
-      title: Text("Set Up Period Cycle"),
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          TextField(
-            controller: cycleDaysController,
-            keyboardType: TextInputType.number,
-            decoration: InputDecoration(labelText: "Period Cycle in Days"),
-          ),
-          SizedBox(height: 10),
-          TextField(
-            controller: startDateController,
-            keyboardType: TextInputType.datetime,
-            decoration:
-                InputDecoration(labelText: "Period Start Date (YYYY-MM-DD)"),
-          ),
-        ],
-      ),
-      actions: [
-        TextButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: Text("Cancel"),
-        ),
-        ElevatedButton(
-          onPressed: () {
-            String cycleDays = cycleDaysController.text;
-            String startDate = startDateController.text;
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return searchUI;
+  }
 
-            // Do something with the input values, like saving to SharedPreferences or Firebase
-            // ...
+  @override
+  double get maxExtent => 52.0;
 
-            Navigator.of(context).pop();
-          },
-          child: Text("Save"),
-        ),
-      ],
-    );
+  @override
+  double get minExtent => 52.0;
+
+  @override
+  bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) {
+    return false;
   }
 }
