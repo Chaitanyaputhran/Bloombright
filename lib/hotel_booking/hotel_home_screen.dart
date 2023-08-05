@@ -1,11 +1,11 @@
+import 'package:flutter/material.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/calendar_popup_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/hotel_list_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/model/hotel_list_data.dart';
-import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:intl/intl.dart';
 import 'filters_screen.dart';
 import 'hotel_app_theme.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HotelHomeScreen extends StatefulWidget {
   @override
@@ -26,11 +26,25 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
     animationController = AnimationController(
         duration: const Duration(milliseconds: 1000), vsync: this);
     super.initState();
+
+    // Check if it's the first time running the app
+    checkFirstTime();
   }
 
-  Future<bool> getData() async {
-    await Future<dynamic>.delayed(const Duration(milliseconds: 200));
-    return true;
+  Future<void> checkFirstTime() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool isFirstTime = prefs.getBool('first_time') ?? true;
+
+    if (isFirstTime) {
+      // Show the setup dialog
+      await showDialog(
+        context: context,
+        builder: (context) => PeriodSetupDialog(),
+      );
+
+      // Mark as not the first time anymore
+      prefs.setBool('first_time', false);
+    }
   }
 
   @override
@@ -131,7 +145,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                   ),
                                   FractionallySizedBox(
                                     widthFactor:
-                                    0.85, // Increase the width by 20%
+                                        0.85, // Increase the width by 20%
                                     child: ElevatedButton(
                                       onPressed: () {
                                         // Add the onPressed function here
@@ -168,7 +182,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                   ),
                                   FractionallySizedBox(
                                     widthFactor:
-                                    0.85, // Increase the width by 20%
+                                        0.85, // Increase the width by 20%
                                     child: ElevatedButton(
                                       onPressed: () {
                                         // Add the onPressed function here
@@ -205,7 +219,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                   ),
                                   FractionallySizedBox(
                                     widthFactor:
-                                    0.85, // Increase the width by 20%
+                                        0.85, // Increase the width by 20%
                                     child: ElevatedButton(
                                       onPressed: () {
                                         // Add the onPressed function here
@@ -240,6 +254,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                       ),
                                     ),
                                   ),
+                                  // Add more ElevatedButtons here if needed
                                 ],
                               );
                             }).toList(),
@@ -438,26 +453,56 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
   }
 }
 
-class ContestTabHeader extends SliverPersistentHeaderDelegate {
-  ContestTabHeader(
-    this.searchUI,
-  );
-  final Widget searchUI;
+class PeriodSetupDialog extends StatefulWidget {
+  @override
+  _PeriodSetupDialogState createState() => _PeriodSetupDialogState();
+}
+
+class _PeriodSetupDialogState extends State<PeriodSetupDialog> {
+  TextEditingController cycleDaysController = TextEditingController();
+  TextEditingController startDateController = TextEditingController();
 
   @override
-  Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return searchUI;
-  }
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: Text("Set Up Period Cycle"),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          TextField(
+            controller: cycleDaysController,
+            keyboardType: TextInputType.number,
+            decoration: InputDecoration(labelText: "Period Cycle in Days"),
+          ),
+          SizedBox(height: 10),
+          TextField(
+            controller: startDateController,
+            keyboardType: TextInputType.datetime,
+            decoration:
+                InputDecoration(labelText: "Period Start Date (YYYY-MM-DD)"),
+          ),
+        ],
+      ),
+      actions: [
+        TextButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          child: Text("Cancel"),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            String cycleDays = cycleDaysController.text;
+            String startDate = startDateController.text;
 
-  @override
-  double get maxExtent => 52.0;
+            // Do something with the input values, like saving to SharedPreferences or Firebase
+            // ...
 
-  @override
-  double get minExtent => 52.0;
-
-  @override
-  bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) {
-    return false;
+            Navigator.of(context).pop();
+          },
+          child: Text("Save"),
+        ),
+      ],
+    );
   }
 }
