@@ -28,18 +28,10 @@ BloomBright is a mobile app designed to support women in tracking their menstrua
 - Personalized Insights: Get tailored health insights and tips based on logged data.
 
 ## Screenshots
-![WhatsApp Image 2023-08-06 at 17 39 22](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/a7b42a9e-532a-4f15-a257-c71ef8065e02)
-![WhatsApp Image 2023-08-06 at 17 39 23](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/197a25ac-b828-48e9-b10f-e1b3056583d4)
-![WhatsApp Image 2023-08-06 at 17 39 24](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/a72c6099-eecf-4a3c-b6a0-0418b8d4981c)
-![WhatsApp Image 2023-08-06 at 17 39 23](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/260f87ff-60cb-4f32-ae22-409b8c215416)
-![WhatsApp Image 2023-08-06 at 11 06 46](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/2b416432-cbca-4640-a83b-7311634afa7e)
-![WhatsApp Image 2023-08-06 at 17 39 24](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/7dde6147-ed31-4ae1-8950-d1dea5649471)
-![WhatsApp Image 2023-08-06 at 11 17 36](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/8a193240-c52c-48ec-878b-608537b833be)
-![WhatsApp Image 2023-08-06 at 11 06 47](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/363dfb2e-d248-4778-92da-88995840942a)
-![WhatsApp Image 2023-08-06 at 11 14 00](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/4d7f2a57-d2a6-4831-922c-057c7ba33ebf)
-![WhatsApp Image 2023-08-06 at 11 14 05](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/e9e986c8-2cad-422e-a110-4e67ae8f380f)
-![WhatsApp Image 2023-08-06 at 17 39 24](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/cdc3f589-8745-4750-97db-7285f3982630)
-![WhatsApp Image 2023-08-06 at 11 14 00](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/f22e4bc0-8aa0-4bc5-8dcd-3eab4fac1d79)
+![WhatsApp Image 2023-08-06 at 17 39 22](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/a7b42a9e-532a-4f15-a257-c71ef8065e02)![WhatsApp Image 2023-08-06 at 17 39 23](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/197a25ac-b828-48e9-b10f-e1b3056583d4)![WhatsApp Image 2023-08-06 at 17 39 24](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/a72c6099-eecf-4a3c-b6a0-0418b8d4981c)
+![WhatsApp Image 2023-08-06 at 17 39 23](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/260f87ff-60cb-4f32-ae22-409b8c215416)![WhatsApp Image 2023-08-06 at 11 06 46](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/2b416432-cbca-4640-a83b-7311634afa7e)![WhatsApp Image 2023-08-06 at 17 39 24](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/7dde6147-ed31-4ae1-8950-d1dea5649471)
+![WhatsApp Image 2023-08-06 at 11 17 36](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/8a193240-c52c-48ec-878b-608537b833be)![WhatsApp Image 2023-08-06 at 11 06 47](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/363dfb2e-d248-4778-92da-88995840942a)![WhatsApp Image 2023-08-06 at 11 14 00](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/4d7f2a57-d2a6-4831-922c-057c7ba33ebf)
+![WhatsApp Image 2023-08-06 at 11 14 05](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/e9e986c8-2cad-422e-a110-4e67ae8f380f)![WhatsApp Image 2023-08-06 at 17 39 24](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/cdc3f589-8745-4750-97db-7285f3982630)![WhatsApp Image 2023-08-06 at 11 14 00](https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/f22e4bc0-8aa0-4bc5-8dcd-3eab4fac1d79)
 
 
 
