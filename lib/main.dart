@@ -59,8 +59,8 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: providerList,
+    return ChangeNotifierProvider(
+      create: (context) => PeriodProvider(),
       child: MaterialApp(
         title: 'Bloom Bright',
         debugShowCheckedModeBanner: false,

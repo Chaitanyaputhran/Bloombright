@@ -9,7 +9,7 @@ class CustomCalendarView extends StatefulWidget {
       this.initialEndDate,
       this.startEndDateChange,
       this.minimumDate,
-      this.maximumDate})
+      this.maximumDate, required Null Function(DateTime startDate, DateTime endDate) onDateRangeSelected})
       : super(key: key);
 
   final DateTime? minimumDate;

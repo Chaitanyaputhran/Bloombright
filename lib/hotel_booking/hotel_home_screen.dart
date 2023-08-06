@@ -3,6 +3,7 @@ import 'package:best_flutter_ui_templates/hotel_booking/calendar_popup_view.dart
 import 'package:best_flutter_ui_templates/hotel_booking/hotel_list_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/model/hotel_list_data.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/model/notes.dart';
+import 'package:best_flutter_ui_templates/hotel_booking/recommendations/recommended.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'filters_screen.dart';
@@ -227,13 +228,54 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder: (context) => BloodT()),
+                                                builder: (context) => RecomendedScreen()),
                                           );
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
                                           primary: Color(
                                               0xFFF80C5BFFF), // Set the gradient colors here
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight: Radius.circular(8.0),
+                                              bottomLeft: Radius.circular(8.0),
+                                              topLeft: Radius.circular(54.0),
+                                              topRight: Radius.circular(54.0),
+                                            ),
+                                          ),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 24,
+                                              left: 16,
+                                              right: 16,
+                                              bottom: 8),
+                                          child: Text(
+                                            'Recommendations', // Add the desired text here
+                                            style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    FractionallySizedBox(
+                                      widthFactor: 0.85,
+                                      child: ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    BloodT()),
+                                          );
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          elevation: 8.0,
+                                          primary: Color(
+                                              0xFFF80F5BFFF), // Set the gradient colors here
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                               bottomRight: Radius.circular(8.0),

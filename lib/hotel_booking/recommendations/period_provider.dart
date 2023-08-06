@@ -5,7 +5,7 @@ import 'model/period.dart';
 import 'package:provider/provider.dart';
 
 class PeriodProvider with ChangeNotifier {
-  late List<Period> periodListFetchedAlredy;
+  late List<Period>? periodListFetchedAlredy = [Period(bloodIndex: 0, painIndex: 0, from: DateTime.now(), to: DateTime.now())];
 
   void addPeriod(
       {required BuildContext ctx,
@@ -63,7 +63,7 @@ class PeriodProvider with ChangeNotifier {
     }
   }
 
-  List<Period> periodListProvideFromAlredyFetched() {
+  List<Period>? periodListProvideFromAlredyFetched() {
     return periodListFetchedAlredy;
   }
 }
