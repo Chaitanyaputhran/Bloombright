@@ -1,3 +1,4 @@
+import 'package:best_flutter_ui_templates/fitness_app/MAchinefitness.dart';
 import 'package:best_flutter_ui_templates/fitness_app/models/tabIcon_data.dart';
 import 'package:best_flutter_ui_templates/fitness_app/training/training_screen.dart';
 import 'package:flutter/material.dart';
@@ -116,7 +117,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
                     return;
                   }
                   setState(() {
-                    tabBody = RecomendedScreen();
+                    tabBody = MenstrualHealthPredictionScreen();
                   });
                 });
               }

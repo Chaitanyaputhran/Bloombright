@@ -1,3 +1,4 @@
+import 'package:best_flutter_ui_templates/hotel_booking/blood.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/calendar_popup_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/hotel_list_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/model/hotel_list_data.dart';
@@ -121,11 +122,11 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                               padding:
                                                   const EdgeInsets.all(8.0),
                                               child: Text(
-                                                'Click Me', // Add the desired text here
+                                                'Ovulation: Aug 24', // Add the desired text here
                                                 style: TextStyle(
                                                   fontSize: 2,
                                                   fontWeight: FontWeight.bold,
-                                                  color: Colors.white,
+                                                  color: Colors.black,
                                                 ),
                                               ),
                                             ),
@@ -155,11 +156,11 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                               padding:
                                                   const EdgeInsets.all(8.0),
                                               child: Text(
-                                                'Click Me', // Add the desired text here
+                                                'Alert: Sep 03', // Add the desired text here
                                                 style: TextStyle(
                                                   fontSize: 2,
                                                   fontWeight: FontWeight.bold,
-                                                  color: Colors.white,
+                                                  color: Colors.black,
                                                 ),
                                               ),
                                             ),
@@ -219,7 +220,11 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                           0.85, // Increase the width by 20%
                                       child: ElevatedButton(
                                         onPressed: () {
-                                          // Add the onPressed function here
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => BloodT()),
+                                          );
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
