@@ -73,6 +73,9 @@ class RelaxView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 50,
+              ),
               SlideTransition(
                 position: _relaxAnimation,
                 child: Text(
@@ -95,7 +98,7 @@ class RelaxView extends StatelessWidget {
                 child: Container(
                   constraints: BoxConstraints(maxWidth: 350, maxHeight: 250),
                   child: Image.asset(
-                    'assets/introduction_animation/relax_image.png',
+                    'assets/introduction_animation/relax_3-removebg-preview(1).png',
                     fit: BoxFit.contain,
                   ),
                 ),

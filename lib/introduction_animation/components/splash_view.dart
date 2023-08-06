@@ -29,9 +29,12 @@ class _SplashViewState extends State<SplashView> {
         child: Column(
           children: [
             SizedBox(
+              height: 70,
+            ),
+            SizedBox(
               width: MediaQuery.of(context).size.width,
               child: Image.asset(
-                'assets/introduction_animation/introduction_image.png',
+                'assets/introduction_animation/meditate-removebg-preview.png',
                 fit: BoxFit.cover,
               ),
             ),

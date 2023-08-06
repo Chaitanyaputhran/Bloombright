@@ -79,6 +79,9 @@ class MoodDiaryVew extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(
+                height: 70,
+              ),
               Text(
                 "Mood Dairy",
                 style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
@@ -104,7 +107,7 @@ class MoodDiaryVew extends StatelessWidget {
                   child: Container(
                     constraints: BoxConstraints(maxWidth: 350, maxHeight: 250),
                     child: Image.asset(
-                      'assets/introduction_animation/mood_dairy_image.png',
+                      'assets/introduction_animation/autumn_painting_girl_riding_bicycle_wind_sketch_6845885-mood-removebg-preview.png',
                       fit: BoxFit.contain,
                     ),
                   ),
