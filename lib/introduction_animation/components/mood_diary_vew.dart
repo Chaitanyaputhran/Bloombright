@@ -91,7 +91,7 @@ class MoodDiaryVew extends StatelessWidget {
                     padding: EdgeInsets.only(
                         left: 64, right: 64, top: 16, bottom: 16),
                     child: Text(
-                      "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
+                      "If you're in bad mood, take a deep breath. If you're in good mood, give thanks to God. Clouds suit my mood just fine. Sometimes we have to behave indifferent towards people who proclaim their love to us, just to see if they are really different.",
                       textAlign: TextAlign.center,
                     ),
                   ),

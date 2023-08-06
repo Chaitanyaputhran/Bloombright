@@ -45,7 +45,7 @@ class _SplashViewState extends State<SplashView> {
             Padding(
               padding: EdgeInsets.only(left: 64, right: 64),
               child: Text(
-                "Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore",
+                "Regular meditation practice has been shown to reduce stress and anxiety, improve mood and emotional regulation, and increase feelings of relaxation and well-being.",
                 textAlign: TextAlign.center,
               ),
             ),
