@@ -1,7 +1,6 @@
 # BloomBright - Women's Health and Menstrual Cycle Tracker
 
-<img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/d487adbd-47fe-4f6d-85e3-3a458c37c8ae
-" width=250>
+<img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/d487adbd-47fe-4f6d-85e3-3a458c37c8ae" width=250>
 
 ## Table of Contents
 
