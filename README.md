@@ -27,8 +27,7 @@ BloomBright is a mobile app designed to support women in tracking their menstrua
 - Personalized Insights: Get tailored health insights and tips based on logged data.
 
 ## Screenshots
-<img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/a7b42a9e-532a-4f15-a257-c71ef8065e02" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/197a25ac-b828-48e9-b10f-e1b3056583d4&color=0e75b6" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/a72c6099-eecf-4a3c-b6a0-0418b8d4981c" width=250> 
-<br>
+
 <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/a7b42a9e-532a-4f15-a257-c71ef8065e02" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/197a25ac-b828-48e9-b10f-e1b3056583d4" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/a72c6099-eecf-4a3c-b6a0-0418b8d4981c" width=250> 
 <br>
 <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/260f87ff-60cb-4f32-ae22-409b8c215416" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/2b416432-cbca-4640-a83b-7311634afa7e" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/7dde6147-ed31-4ae1-8950-d1dea5649471" width=250> 
