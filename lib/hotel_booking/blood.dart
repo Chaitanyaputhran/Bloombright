@@ -11,10 +11,10 @@ class BloodT extends StatelessWidget {
   final List<BloodType> bloodTypes = [
     BloodType('images/black.png', 'Blood that has taken longer to exit the uterus and has oxidized. Sometimes seen at the end of your period.'),
     BloodType('images/brightred.png', 'This is the typical color at the start of your period. Indicates fresh blood and a healthy shedding of the uterine lining.'),
-    BloodType('assets/brown.png', 'Blood that has been in the uterus longer before being expelled. Common towards the end of your period. May also appear at the beginning of your period.'),
-    BloodType('assets/darkred.png', 'Dark red menstrual blood usually indicates older blood that has taken more time to exit the uterus, often observed towards the end of your period. While generally normal, abrupt changes in color or flow should be discussed with a healthcare professional.'),
-    BloodType('assets/grey.png', 'Uncommon and may indicate infection. Should be discussed with a healthcare provider.'),
-    BloodType('assets/orange.png', 'Uncommon and may indicate infection or an issue with cervical fluids mixing with blood. Should be discussed with a healthcare provider.'),
+    BloodType('images/brown.png', 'Blood that has been in the uterus longer before being expelled. Common towards the end of your period. May also appear at the beginning of your period.'),
+    BloodType('images/darkred.png', 'Dark red menstrual blood usually indicates older blood that has taken more time to exit the uterus, often observed towards the end of your period. While generally normal, abrupt changes in color or flow should be discussed with a healthcare professional.'),
+    BloodType('images/grey.png', 'Uncommon and may indicate infection. Should be discussed with a healthcare provider.'),
+    BloodType('images/orange.png', 'Uncommon and may indicate infection or an issue with cervical fluids mixing with blood. Should be discussed with a healthcare provider.'),
   ];
 
   @override
@@ -22,8 +22,16 @@ class BloodT extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Blood Types'),
+          title: Center(
+            child: Text('Blood Types',
+            style: TextStyle(
+              color: Colors.black,
+            ),),
+          ),
+            backgroundColor: Color(0xffF7EBE1),
+          elevation: 0.0,
         ),
+        backgroundColor: Color(0xffF7EBE1),
         body: ListView.builder(
           itemCount: bloodTypes.length,
           itemBuilder: (context, index) {

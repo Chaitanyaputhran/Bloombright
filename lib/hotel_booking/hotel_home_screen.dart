@@ -120,13 +120,15 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                                 .white, // Set the gradient colors here
                                             child: Padding(
                                               padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: Text(
-                                                'Ovulation: Aug 24', // Add the desired text here
-                                                style: TextStyle(
-                                                  fontSize: 2,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.black,
+                                                  const EdgeInsets.only(left: 20, right:8, top:8, bottom:8),
+                                              child: Center(
+                                                child: Text(
+                                                  'Ovulation Aug 24', // Add the desired text here
+                                                  style: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black,
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -154,13 +156,15 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                                 .white, // Set the gradient colors here
                                             child: Padding(
                                               padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: Text(
-                                                'Alert: Sep 03', // Add the desired text here
-                                                style: TextStyle(
-                                                  fontSize: 2,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.black,
+                                              const EdgeInsets.only(left: 40, right:8, top:8, bottom:8),
+                                              child: Center(
+                                                child: Text(
+                                                  'Alert         Sep 03', // Add the desired text here
+                                                  style: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black,
+                                                  ),
                                                 ),
                                               ),
                                             ),
@@ -246,7 +250,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                               right: 16,
                                               bottom: 8),
                                           child: Text(
-                                            'Profile', // Add the desired text here
+                                            'Blood Analysis', // Add the desired text here
                                             style: TextStyle(
                                               fontSize: 25,
                                               fontWeight: FontWeight.bold,
@@ -331,39 +335,14 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
               ),
             ),
             Expanded(
-              child: Center(
-                child: Text(
-                  'Explore',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 22,
-                  ),
+              child: Text(
+                '     Explore',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 22,
                 ),
               ),
             ),
-            Container(
-              width: AppBar().preferredSize.height + 40,
-              height: AppBar().preferredSize.height,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(32.0),
-                      ),
-                      onTap: () {},
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(FontAwesomeIcons.locationDot),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )
           ],
         ),
       ),
