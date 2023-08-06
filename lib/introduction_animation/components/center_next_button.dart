@@ -67,82 +67,82 @@ class CenterNextButton extends StatelessWidget {
               ),
             ),
           ),
-          SlideTransition(
-            position: _topMoveAnimation,
-            child: AnimatedBuilder(
-              animation: animationController,
-              builder: (context, child) => Padding(
-                padding: EdgeInsets.only(
-                    bottom: 38 - (38 * _signUpMoveAnimation.value)),
-                child: Container(
-                  height: 58,
-                  width: 58 + (200 * _signUpMoveAnimation.value),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                        8 + 32 * (1 - _signUpMoveAnimation.value)),
-                    color: Color(0xff132137),
+        SlideTransition(
+          position: _topMoveAnimation,
+          child: AnimatedBuilder(
+            animation: animationController,
+            builder: (context, child) => Padding(
+              padding: EdgeInsets.only(
+                bottom: 38 - (38 * _signUpMoveAnimation.value),
+              ),
+              child: Container(
+                height: 58,
+                width: 58 + (200 * _signUpMoveAnimation.value),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(
+                    8 + 32 * (1 - _signUpMoveAnimation.value),
                   ),
-                  child: PageTransitionSwitcher(
-                    duration: Duration(milliseconds: 480),
-                    reverse: _signUpMoveAnimation.value < 0.7,
-                    transitionBuilder: (
+                  color: Color(0xff132137),
+                ),
+                child: PageTransitionSwitcher(
+                  duration: Duration(milliseconds: 480),
+                  reverse: _signUpMoveAnimation.value < 0.7,
+                  transitionBuilder: (
                       Widget child,
                       Animation<double> animation,
                       Animation<double> secondaryAnimation,
-                    ) {
-                      return SharedAxisTransition(
-                        fillColor: Colors.transparent,
-                        child: child,
-                        animation: animation,
-                        secondaryAnimation: secondaryAnimation,
-                        transitionType: SharedAxisTransitionType.vertical,
+                      ) {
+                    return SharedAxisTransition(
+                      fillColor: Colors.transparent,
+                      child: child,
+                      animation: animation,
+                      secondaryAnimation: secondaryAnimation,
+                      transitionType: SharedAxisTransitionType.vertical,
+                    );
+                  },
+                  child: _signUpMoveAnimation.value > 0.7
+                      ? InkWell(
+                    key: ValueKey('Sign Up button'),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MainScreen()),
                       );
                     },
-                    child: _signUpMoveAnimation.value > 0.7
-                        ? InkWell(
-                            key: ValueKey('Sign Up button'),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => MainScreen()),
-                          );
-                          child:
-                          Padding(
-                            padding: EdgeInsets.only(left: 16.0, right: 16.0),
-                            child: Row(
-                              mainAxisAlignment:
-                              MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Sign Up',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                Icon(Icons.arrow_forward_rounded,
-                                    color: Colors.white),
-                              ],
-                            ),
-                          );
-                        })
-                        : InkWell(
-                            key: ValueKey('next button'),
-                            onTap: onNextClick,
-                            child: Padding(
-                              padding: EdgeInsets.all(16.0),
-                              child: Icon(Icons.arrow_forward_ios_rounded,
-                                  color: Colors.white),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 16.0, right: 16.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Center(
+                            child: Text(
+                              "Let\'s Dive In!",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
+                          Icon(Icons.arrow_forward_rounded, color: Colors.white),
+                        ],
+                      ),
+                    ),
+                  )
+                      : InkWell(
+                    key: ValueKey('next button'),
+                    onTap: onNextClick,
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: Icon(Icons.arrow_forward_ios_rounded, color: Colors.white),
+                    ),
                   ),
                 ),
               ),
             ),
           ),
-          Padding(
+        ),
+        Padding(
             padding: const EdgeInsets.only(top: 8),
             child: SlideTransition(
               position: _loginTextMoveAnimation,
