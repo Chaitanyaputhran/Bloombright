@@ -141,8 +141,9 @@ class _MenstrualHealthPredictionScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Menstrual Health Prediction'),
-        backgroundColor: Colors.orange[200], // Set the app bar color to peach
+        backgroundColor: Color(0xffF7EBE1),
+        elevation: 0.0,
+        title: Text('Menstrual Health Prediction'), // Set the app bar color to peach
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -150,8 +151,9 @@ class _MenstrualHealthPredictionScreenState
           },
         ),
       ),
+      backgroundColor: Color(0xffF7EBE1),
       body: Container(
-        color: Colors.orange[200],
+        color: Color(0xffF7EBE1),
         child: Center(
           child: SingleChildScrollView(
             child: Padding(

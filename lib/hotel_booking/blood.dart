@@ -22,13 +22,13 @@ class BloodT extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Color(0xffF7EBE1),
           title: Center(
             child: Text('Blood Types',
             style: TextStyle(
               color: Colors.black,
             ),),
           ),
-            backgroundColor: Color(0xffF7EBE1),
           elevation: 0.0,
         ),
         backgroundColor: Color(0xffF7EBE1),
