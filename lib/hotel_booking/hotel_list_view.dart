@@ -53,11 +53,14 @@ class _HotelListViewState extends State<HotelListView> {
     return AnimatedBuilder(
       animation: widget.animationController!,
       builder: (BuildContext context, Widget? child) {
+        if (widget.animationController == null || widget.animation == null) {
+          return SizedBox.shrink(); // Return an empty widget if either animationController or animation is null
+        }
+
         return FadeTransition(
           opacity: widget.animation!,
           child: Transform(
-            transform: Matrix4.translationValues(
-                0.0, 50 * (1.0 - widget.animation!.value), 0.0),
+            transform: Matrix4.translationValues(0.0, 50 * (1.0 - widget.animation!.value), 0.0),
             child: Padding(
               padding: const EdgeInsets.only(
                   left: 24, right: 24, top: 8, bottom: 16),
@@ -111,12 +114,14 @@ class _HotelListViewState extends State<HotelListView> {
                                             SizedBox(
                                               height: 10,
                                             ),
-                                            Text(
-                                              'My Calender',
-                                              textAlign: TextAlign.left,
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.w600,
-                                                fontSize: 22,
+                                            Center(
+                                              child: Text(
+                                                'My Calender',
+                                                textAlign: TextAlign.left,
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.w600,
+                                                  fontSize: 22,
+                                                ),
                                               ),
                                             ),
                                             SizedBox(

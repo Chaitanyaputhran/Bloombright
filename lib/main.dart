@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:best_flutter_ui_templates/fitness_app/fitness_app_home_screen.dart';
+import 'package:best_flutter_ui_templates/hotel_booking/hotel_list_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/main_properties/provider_list.dart';
 import 'package:best_flutter_ui_templates/introduction_animation/components/splash_view.dart';
 import 'package:best_flutter_ui_templates/introduction_animation/introduction_animation_screen.dart';
@@ -68,14 +69,14 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
           textTheme: AppTheme.textTheme,
           platform: TargetPlatform.iOS,
         ),
-        home: StreamBuilder(
+        home: StreamBuilder<User?>(
           stream: FirebaseAuth.instance.authStateChanges(),
           builder: (context, snapshot) {
             ScreenUtil.init(
               context,
             );
             if (snapshot.hasData) {
-              return IntroductionAnimationScreen();
+              return FitnessAppHomeScreen();
             } else {
               return IntroductionAnimationScreen();
             }
