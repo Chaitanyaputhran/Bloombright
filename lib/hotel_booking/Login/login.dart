@@ -90,6 +90,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       _isLoading
                           ? CircularProgressIndicator()
                           : ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateProperty.all<Color>(
+                                        Color(0xff132137)),
+                              ),
                               onPressed: () {
                                 Navigator.push(
                                   context,

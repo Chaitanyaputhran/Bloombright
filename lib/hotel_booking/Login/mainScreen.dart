@@ -46,14 +46,15 @@ class MainScreen extends StatelessWidget {
                   children: [
                     Container(
                       width: double.infinity,
+                      height: 50,
                       child: ElevatedButton(
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(Colors.pink.shade100),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xff132137)),
                         ),
                         child: Text(
                           'Login',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
                           ),
@@ -84,14 +85,15 @@ class MainScreen extends StatelessWidget {
                     ),
                     Container(
                       width: double.infinity,
+                      height: 50,
                       child: ElevatedButton(
                         style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(Colors.pink.shade100),
+                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xff132137)),
                         ),
                         child: Text(
                           'Sign-UP',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.w600,
                           ),

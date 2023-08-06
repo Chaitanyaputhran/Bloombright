@@ -95,6 +95,9 @@ class CreateScreen extends StatelessWidget {
                         Builder(
                           builder: (context) {
                             return ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all<Color>(Color(0xff132137)),
+                              ),
                               onPressed: () {
                                 // if (sas == false) {
                                 if (confirmController.text ==
