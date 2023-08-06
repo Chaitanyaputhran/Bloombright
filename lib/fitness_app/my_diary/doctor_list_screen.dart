@@ -46,7 +46,7 @@ class DoctorListScreen extends StatelessWidget {
                 leading: CircleAvatar(
                   child: ClipOval(
                       child: Image.asset(
-                    "assets/images/profile.svg",
+                    "assets/design_course/userImage.png",
                   )),
                 ),
                 title: Text(

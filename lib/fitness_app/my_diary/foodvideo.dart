@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import '../fitness_app_theme.dart';
 
-class WorkoutView extends StatelessWidget {
+class FoodView extends StatelessWidget {
   final AnimationController? animationController;
   final Animation<double>? animation;
 
-  const WorkoutView({Key? key, this.animationController, this.animation})
+  const FoodView({Key? key, this.animationController, this.animation})
       : super(key: key);
 
   @override
@@ -63,7 +63,7 @@ class WorkoutView extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
                         child: const Text(
-                          '8 Exercises to ease menstrual period',
+                          'Healthy Food During Menstruation',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontFamily: FitnessAppTheme.fontName,
@@ -86,7 +86,7 @@ class WorkoutView extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(left: 4),
                               child: Icon(
-                                Icons.timer,
+                                Icons.fastfood_outlined,
                                 color: FitnessAppTheme.white,
                                 size: 16,
                               ),
@@ -94,7 +94,7 @@ class WorkoutView extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(left: 4.0),
                               child: const Text(
-                                '68 min',
+                                'Plan',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: FitnessAppTheme.fontName,
@@ -137,7 +137,7 @@ class WorkoutView extends StatelessWidget {
                       // Add the YouTube video player here
                       YoutubePlayer(
                         controller: YoutubePlayerController(
-                          initialVideoId: 'awrZtZ49_bg',
+                          initialVideoId: 'nVOtHnEcNJY',
                           flags: YoutubePlayerFlags(
                             autoPlay: false,
                             mute: false,

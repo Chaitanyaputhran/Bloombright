@@ -23,43 +23,91 @@ class DoctorCard extends StatelessWidget {
               padding: const EdgeInsets.only(
                   left: 24, right: 24, top: 16, bottom: 18),
               child: Container(
-                height: 0.3,
-                alignment: Alignment.bottomRight,
                 decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
+                  gradient: LinearGradient(colors: [
+                    FitnessAppTheme.nearlyDarkBlue,
+                    HexColor("#6F56E8")
+                  ], begin: Alignment.topLeft, end: Alignment.bottomRight),
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(8.0),
                     bottomLeft: Radius.circular(8.0),
                     bottomRight: Radius.circular(8.0),
                     topRight: Radius.circular(68.0),
                   ),
-                ),
-                child: Column(
-                  children: [
-                    SizedBox(height: 0.03),
-                    Text(
-                      'For Professional Medical Advice..',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.blue[600],
-                        fontSize: 30,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                    OutlinedButton(
-                      child: Text('Consult Now'),
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Colors.lightBlueAccent),
-                      ),
-                      onPressed: () {
-                        // Navigate to a doctor details screen or any other relevant screen
-                        Navigator.push(context, MaterialPageRoute (
-                          builder: (BuildContext context) =>  DoctorListScreen(),
-                        ),
-                        );
-                      },
+                  boxShadow: <BoxShadow>[
+                    BoxShadow(
+                      color: FitnessAppTheme.grey.withOpacity(0.6),
+                      offset: Offset(1.1, 1.1),
+                      blurRadius: 10.0,
                     ),
                   ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'For Professional Medical Advice..',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: FitnessAppTheme.fontName,
+                          fontWeight: FontWeight.normal,
+                          fontSize: 14,
+                          letterSpacing: 0.0,
+                          color: FitnessAppTheme.white,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: const Text(
+                          'Consult Now',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontFamily: FitnessAppTheme.fontName,
+                            fontWeight: FontWeight.normal,
+                            fontSize: 20,
+                            letterSpacing: 0.0,
+                            color: FitnessAppTheme.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 32,
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (BuildContext context) => DoctorListScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Consult Now',
+                          style: TextStyle(
+                            fontFamily: FitnessAppTheme.fontName,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 14,
+                            letterSpacing: 0.0,
+                            color: FitnessAppTheme.white,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.transparent,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          side: BorderSide(
+                            color: FitnessAppTheme.white,
+                            width: 1.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -70,3 +118,14 @@ class DoctorCard extends StatelessWidget {
   }
 }
 
+class HexColor extends Color {
+  HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
+
+  static int _getColorFromHex(String hexColor) {
+    hexColor = hexColor.toUpperCase().replaceAll('#', '');
+    if (hexColor.length == 6) {
+      hexColor = 'FF' + hexColor;
+    }
+    return int.parse(hexColor, radix: 16);
+  }
+}

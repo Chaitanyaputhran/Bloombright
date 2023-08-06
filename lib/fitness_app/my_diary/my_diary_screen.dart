@@ -1,5 +1,6 @@
 import 'package:best_flutter_ui_templates/fitness_app/my_diary/doctor_list_screen.dart';
 import 'package:best_flutter_ui_templates/fitness_app/my_diary/doctorcard.dart';
+import 'package:best_flutter_ui_templates/fitness_app/my_diary/foodvideo.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/body_measurement.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/glass_view.dart';
 import 'package:best_flutter_ui_templates/fitness_app/ui_view/mediterranean_diet_view.dart';
@@ -64,8 +65,25 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
     const int count = 9;
 
 
-    SizedBox(
-      height: 30,
+    listViews.add(
+      TitleView(
+        titleTxt: 'Diet plan',
+        animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
+            parent: widget.animationController!,
+            curve:
+            Interval((1 / count) * 7, 1.0, curve: Curves.fastOutSlowIn))),
+        animationController: widget.animationController!,
+      ),
+    );
+
+    listViews.add(
+      FoodView(
+        animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
+            parent: widget.animationController!,
+            curve:
+            Interval((1 / count) * 2, 1.0, curve: Curves.fastOutSlowIn))),
+        animationController: widget.animationController!,
+      ),
     );
 
     listViews.add(
@@ -74,7 +92,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController!,
             curve:
-                Interval((1 / count) * 7, 1.0, curve: Curves.fastOutSlowIn))),
+            Interval((1 / count) * 7, 1.0, curve: Curves.fastOutSlowIn))),
         animationController: widget.animationController!,
       ),
     );
@@ -91,16 +109,6 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
     );
 
     listViews.add(
-      GlassView(
-          animation: Tween<double>(begin: 0.0, end: 1.0).animate(
-              CurvedAnimation(
-                  parent: widget.animationController!,
-                  curve: Interval((1 / count) * 9, 1.0,
-                      curve: Curves.fastOutSlowIn))),
-          animationController: widget.animationController!),
-    );
-
-    listViews.add(
       TitleView(
         titleTxt: 'Doctor Consultancy',
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
@@ -110,6 +118,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
         animationController: widget.animationController!,
       ),
     );
+
     listViews.add(
       Expanded(
         child: DoctorCard(
@@ -120,6 +129,16 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
                         curve: Curves.fastOutSlowIn))),
             animationController: widget.animationController!),
       ),
+    );
+
+    listViews.add(
+      GlassView(
+          animation: Tween<double>(begin: 0.0, end: 1.0).animate(
+              CurvedAnimation(
+                  parent: widget.animationController!,
+                  curve: Interval((1 / count) * 9, 1.0,
+                      curve: Curves.fastOutSlowIn))),
+          animationController: widget.animationController!),
     );
   }
 
