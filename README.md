@@ -11,8 +11,6 @@
 5. [Usage](#usage)
 6. [Feedback](#feedback)
 7. [Support](#support)
-8. [Contributing](#contributing)
-9. [License](#license)
 
 ## Introduction
 
