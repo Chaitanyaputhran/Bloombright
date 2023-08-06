@@ -104,7 +104,7 @@ class RunningView extends StatelessWidget {
                                     right: 16,
                                   ),
                                   child: Text(
-                                    "Keep it up\nand stick to your plan!",
+                                    "To check Body Mass Index, Click!",
                                     textAlign: TextAlign.left,
                                     style: TextStyle(
                                       fontFamily: FitnessAppTheme.fontName,

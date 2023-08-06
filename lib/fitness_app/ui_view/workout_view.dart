@@ -1,5 +1,6 @@
 import 'package:best_flutter_ui_templates/main.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import '../fitness_app_theme.dart';
 
 class WorkoutView extends StatelessWidget {
@@ -29,15 +30,17 @@ class WorkoutView extends StatelessWidget {
                     HexColor("#6F56E8")
                   ], begin: Alignment.topLeft, end: Alignment.bottomRight),
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(8.0),
-                      bottomLeft: Radius.circular(8.0),
-                      bottomRight: Radius.circular(8.0),
-                      topRight: Radius.circular(68.0)),
+                    topLeft: Radius.circular(8.0),
+                    bottomLeft: Radius.circular(8.0),
+                    bottomRight: Radius.circular(8.0),
+                    topRight: Radius.circular(68.0),
+                  ),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
-                        color: FitnessAppTheme.grey.withOpacity(0.6),
-                        offset: Offset(1.1, 1.1),
-                        blurRadius: 10.0),
+                      color: FitnessAppTheme.grey.withOpacity(0.6),
+                      offset: Offset(1.1, 1.1),
+                      blurRadius: 10.0,
+                    ),
                   ],
                 ),
                 child: Padding(
@@ -60,7 +63,7 @@ class WorkoutView extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),
                         child: const Text(
-                          'Legs Toning and\nGlutes Workout at Home',
+                          '8 Exercises to ease menstrual period',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontFamily: FitnessAppTheme.fontName,
@@ -111,10 +114,11 @@ class WorkoutView extends StatelessWidget {
                                 shape: BoxShape.circle,
                                 boxShadow: <BoxShadow>[
                                   BoxShadow(
-                                      color: FitnessAppTheme.nearlyBlack
-                                          .withOpacity(0.4),
-                                      offset: Offset(8.0, 8.0),
-                                      blurRadius: 8.0),
+                                    color:
+                                    FitnessAppTheme.nearlyBlack.withOpacity(0.4),
+                                    offset: Offset(8.0, 8.0),
+                                    blurRadius: 8.0,
+                                  ),
                                 ],
                               ),
                               child: Padding(
@@ -125,10 +129,31 @@ class WorkoutView extends StatelessWidget {
                                   size: 44,
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
-                      )
+                      ),
+                      SizedBox(height: 16), // Add spacing for the YouTube video
+                      // Add the YouTube video player here
+                      YoutubePlayer(
+                        controller: YoutubePlayerController(
+                          initialVideoId: 'nVOtHnEcNJY',
+                          flags: YoutubePlayerFlags(
+                            autoPlay: false,
+                            mute: false,
+                            isLive: false,
+                          ),
+                        ),
+                        showVideoProgressIndicator: true,
+                        progressIndicatorColor: Colors.blueAccent,
+                        progressColors: ProgressBarColors(
+                          playedColor: Colors.blueAccent,
+                          handleColor: Colors.blueAccent,
+                        ),
+                        onReady: () {
+                          print('Player is ready.');
+                        },
+                      ),
                     ],
                   ),
                 ),
