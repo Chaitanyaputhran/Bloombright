@@ -1,4 +1,4 @@
-# BloomBright - Women's Health and Menstrual Cycle Tracker
+<p align='center'># BloomBright - Women's Health and Menstrual Cycle Tracker</p>
 
 <p align='center'> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/a3d58a5e-cdcb-4271-a39b-5ca5ccff3f5d" width=250></p>
 
