@@ -41,7 +41,7 @@ BloomBright is a mobile app designed to support women in tracking their menstrua
 
 Follow these steps to get started with BloomBright:
 
-1. Download and install the BloomBright app from the [App Store](insert_app_store_link_here) or [Google Play Store](insert_play_store_link_here).
+1. Download and install the BloomBright app from the [Google Play Store]#(insert_play_store_link_here).
 2. Create an account or log in if you already have one.
 3. Set up your profile with basic information and preferences.
 4. Start logging your menstrual cycle details, symptoms, and flow intensity.
