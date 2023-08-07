@@ -1,8 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'model/period.dart';
 import 'period_provider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Constant/blogDetail.dart';
@@ -131,7 +128,7 @@ class RecomendedScreen extends StatelessWidget {
     }
 
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
+      backgroundColor: Color(0xffF7EBE1),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 14),
         child: ListView.builder(

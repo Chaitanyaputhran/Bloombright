@@ -1,3 +1,5 @@
+import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
+import 'package:best_flutter_ui_templates/fitness_app/my_diary/doctorcard.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/calendar_popup_view.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/hotel_app_theme.dart';
 import 'package:flutter/material.dart';
@@ -65,18 +67,27 @@ class _HotelListViewState extends State<HotelListView> {
               padding: const EdgeInsets.only(
                   left: 24, right: 24, top: 8, bottom: 16),
               child: InkWell(
-                splashColor: Colors.transparent,
+                splashColor: FitnessAppTheme.nearlyDarkBlue,
                 onTap: () {
                   showDemoDialog(context);
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+                    gradient: LinearGradient(colors: [
+                      FitnessAppTheme.nearlyDarkBlue,
+                      HexColor("#6F56E8")
+                    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(8.0),
+                      bottomLeft: Radius.circular(8.0),
+                      bottomRight: Radius.circular(8.0),
+                      topRight: Radius.circular(8.0),
+                    ),
                     boxShadow: <BoxShadow>[
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.6),
-                        offset: const Offset(4, 4),
-                        blurRadius: 16,
+                        color: FitnessAppTheme.grey.withOpacity(0.6),
+                        offset: Offset(1.1, 1.1),
+                        blurRadius: 10.0,
                       ),
                     ],
                   ),

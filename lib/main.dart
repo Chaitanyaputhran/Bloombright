@@ -1,9 +1,6 @@
 import 'dart:io';
 import 'package:best_flutter_ui_templates/app_theme.dart';
 import 'package:best_flutter_ui_templates/fitness_app/fitness_app_home_screen.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/hotel_list_view.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/main_properties/provider_list.dart';
-import 'package:best_flutter_ui_templates/introduction_animation/components/splash_view.dart';
 import 'package:best_flutter_ui_templates/introduction_animation/introduction_animation_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -12,7 +9,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'hotel_booking/recommendations/period_provider.dart';
-import 'navigation_home_screen.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 void main() async {
@@ -76,7 +72,7 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
               context,
             );
             if (snapshot.hasData) {
-              return FitnessAppHomeScreen();
+              return IntroductionAnimationScreen()/*FitnessAppHomeScreen()*/;
             } else {
               return IntroductionAnimationScreen();
             }

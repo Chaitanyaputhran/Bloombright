@@ -41,9 +41,12 @@ class _SplashViewState extends State<SplashView> {
             Padding(
               padding: EdgeInsets.only(top: 8.0, bottom: 8.0),
               child: Text(
-                "Clearhead",
-                style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+                "BloomBright",
+                style: TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             Padding(
               padding: EdgeInsets.only(left: 64, right: 64),

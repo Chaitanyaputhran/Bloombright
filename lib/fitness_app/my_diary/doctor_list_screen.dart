@@ -1,4 +1,3 @@
-import 'package:best_flutter_ui_templates/fitness_app/my_diary/Constant/colors.dart';
 import 'package:best_flutter_ui_templates/fitness_app/my_diary/Constant/doctorDetails.dart';
 import 'package:best_flutter_ui_templates/fitness_app/my_diary/model/doctor.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/provider/custom_url_launcher.dart';
@@ -46,7 +45,7 @@ class DoctorListScreen extends StatelessWidget {
                 leading: CircleAvatar(
                   child: ClipOval(
                       child: Image.asset(
-                    "assets/design_course/userImage.png",
+                    "assets/fitness_and_diet/userImage.png",
                   )),
                 ),
                 title: Text(
