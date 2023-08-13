@@ -72,7 +72,7 @@ class _MyAppState extends State<MyApp> with TickerProviderStateMixin {
               context,
             );
             if (snapshot.hasData) {
-              return IntroductionAnimationScreen()/*FitnessAppHomeScreen()*/;
+              return FitnessAppHomeScreen();
             } else {
               return IntroductionAnimationScreen();
             }

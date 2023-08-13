@@ -67,7 +67,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController!,
             curve:
-            Interval((1 / count) * 7, 1.0, curve: Curves.fastOutSlowIn))),
+            Interval((1 / count) * 0, 1.0, curve: Curves.fastOutSlowIn))),
         animationController: widget.animationController!,
       ),
     );
@@ -77,7 +77,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController!,
             curve:
-            Interval((1 / count) * 2, 1.0, curve: Curves.fastOutSlowIn))),
+            Interval((1 / count) * 0, 1.0, curve: Curves.fastOutSlowIn))),
         animationController: widget.animationController!,
       ),
     );
@@ -88,7 +88,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
             parent: widget.animationController!,
             curve:
-            Interval((1 / count) * 7, 1.0, curve: Curves.fastOutSlowIn))),
+            Interval((1 / count) * 0, 1.0, curve: Curves.fastOutSlowIn))),
         animationController: widget.animationController!,
       ),
     );
@@ -116,15 +116,13 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
     );
 
     listViews.add(
-      Expanded(
-        child: DoctorCard(
-            animation: Tween<double>(begin: 0.0, end: 1.0).animate(
-                CurvedAnimation(
-                    parent: widget.animationController!,
-                    curve: Interval((1 / count) * 10, 1.0,
-                        curve: Curves.fastOutSlowIn))),
-            animationController: widget.animationController!),
-      ),
+      DoctorCard(
+          animation: Tween<double>(begin: 0.0, end: 1.0).animate(
+              CurvedAnimation(
+                  parent: widget.animationController!,
+                  curve: Interval((1 / count) * 10, 1.0,
+                      curve: Curves.fastOutSlowIn))),
+          animationController: widget.animationController!),
     );
 
     listViews.add(
@@ -132,7 +130,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
           animation: Tween<double>(begin: 0.0, end: 1.0).animate(
               CurvedAnimation(
                   parent: widget.animationController!,
-                  curve: Interval((1 / count) * 9, 1.0,
+                  curve: Interval((1 / count) * 0, 1.0,
                       curve: Curves.fastOutSlowIn))),
           animationController: widget.animationController!),
     );

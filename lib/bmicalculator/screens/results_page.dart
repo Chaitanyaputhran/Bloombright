@@ -13,8 +13,12 @@ class ResultsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('BMI CALCULATOR')),
+        title: Text('  BMI CALCULATOR  ',
+        style: TextStyle(color: Colors.black),),
+        elevation: 0,
+        backgroundColor: Color(0xffF7EBE1),
       ),
+      backgroundColor: Color(0xffF7EBE1),
       body:Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
