@@ -93,7 +93,11 @@ class _MenstrualHealthPredictionScreenState
   }
 
   Widget buildOptionRow(
-      String title, List<String> options, String? selectedValue, Function(String?) onSelect) {
+      String title,
+      List<String> options,
+      String? selectedValue,
+      Function(String?) onSelect,
+      ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -106,26 +110,31 @@ class _MenstrualHealthPredictionScreenState
           spacing: 12,
           children: options.map((option) {
             bool isSelected = selectedValue == option;
-            return Container(
-              decoration: BoxDecoration(
-                color: isSelected ? Colors.blue : optionColor,
-                borderRadius: BorderRadius.circular(100),
-                border: Border.all(color: Colors.blue), // Add a border for selected chips
-              ),
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16), // Add padding to chips
-              child: ChoiceChip(
-                label: Text(
-                  option,
-                  style: TextStyle(
-                    color: isSelected ? Colors.white : Colors.black, // Change label text color
-                    fontWeight: FontWeight.bold,
-                  ),
+            return GestureDetector(
+              onTap: () {
+                onSelect(isSelected ? null : option);
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  color: isSelected ? optionColor : Colors.pink,
+                  borderRadius: BorderRadius.circular(100),
+                  border: Border.all(color: isSelected ? Colors.blue : Colors.pink),
                 ),
-                selected: isSelected,
-                selectedColor: Colors.blue,
-                onSelected: (isSelected) {
-                  onSelect(isSelected ? option : null);
-                },
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                child: ChoiceChip(
+                  label: Text(
+                    option,
+                    style: TextStyle(
+                      color: isSelected ? Colors.white : Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  selected: isSelected,
+                  selectedColor: Colors.blue,
+                  onSelected: (isSelected) {
+                    onSelect(isSelected ? option : null);
+                  },
+                ),
               ),
             );
           }).toList(),
@@ -133,6 +142,7 @@ class _MenstrualHealthPredictionScreenState
       ],
     );
   }
+
 
   @override
   Widget build(BuildContext context) {
