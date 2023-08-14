@@ -294,7 +294,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                               right: 16,
                                               bottom: 8),
                                           child: Text(
-                                            'Recommendations',
+                                            'Menorrhagia',
                                             style: TextStyle(
                                               fontSize: 25,
                                               fontWeight: FontWeight.bold,
