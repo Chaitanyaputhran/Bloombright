@@ -148,17 +148,21 @@ class _MenstrualHealthPredictionScreenState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Menstrual Health Prediction'),
-        backgroundColor: Colors.orange[200],
+        title: Text('Menstrual Health Prediction',
+        style: TextStyle(
+          color: Colors.black,
+        ),),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+        elevation: 0,
+        backgroundColor: Color(0xffF7EBE1),
       ),
+      backgroundColor: Color(0xffF7EBE1),
       body: Container(
-        color: Colors.orange[200],
         child: Center(
           child: SingleChildScrollView(
             child: Padding(
