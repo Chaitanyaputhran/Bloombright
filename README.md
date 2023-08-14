@@ -30,7 +30,7 @@ BloomBright is a mobile app designed to support women in tracking their menstrua
 <br>
 <p align='center'><img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/664aac3d-4323-414c-8774-937a6947bb3f" width=250>  <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/11d7be04-9242-4a9d-ac50-17a2326288d7" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/7dde6147-ed31-4ae1-8950-d1dea5649471" width=250></p>
 <br>
-<p align='center'> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/2b416432-cbca-4640-a83b-7311634afa7e" width=250> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/8a193240-c52c-48ec-878b-608537b833be" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/363dfb2e-d248-4778-92da-88995840942a" width=250></p>
+<p align='center'> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/2b416432-cbca-4640-a83b-7311634afa7e" width=250> <img src="https://github.com/Chaitanyaputhran/Bloombright/blob/9b11929fb2c29f0d9c3434d103941dd3a2753134/assets/images/homescreen.jpeg" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/363dfb2e-d248-4778-92da-88995840942a" width=250></p>
 <br>
 <p align='center'> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/4d7f2a57-d2a6-4831-922c-057c7ba33ebf" width=250> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/e9e986c8-2cad-422e-a110-4e67ae8f380f" width=250>  <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/7e4eb4a3-c854-4592-9465-87fc1e494d7c" width=250> </p>
 
