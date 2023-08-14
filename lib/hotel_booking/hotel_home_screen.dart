@@ -96,7 +96,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                       animationController: animationController!,
                                     ),
                                     SizedBox(
-                                      height: 10,
+                                      height: 5,
                                     ),
                                     Row(
                                       children: [
@@ -178,7 +178,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                       ],
                                     ),
                                     SizedBox(
-                                      height: 20,
+                                      height: 5,
                                     ),
                                     FractionallySizedBox(
                                       widthFactor: 0.85,
@@ -193,8 +193,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
-                                          primary: Color(
-                                              0xFFF80F5BFFF), // Set the gradient colors here
+                                          primary: Colors.red[400]!.withOpacity(0.8), // Set the gradient colors here
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                               bottomRight: Radius.circular(8.0),
@@ -213,13 +212,16 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                           child: Text(
                                             'Notes', // Add the desired text here
                                             style: TextStyle(
-                                              fontSize: 25,
+                                              fontSize: 22,
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.white,
+                                              color: Colors.black,
                                             ),
                                           ),
                                         ),
                                       ),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
                                     ),
                                     FractionallySizedBox(
                                       widthFactor:
@@ -234,8 +236,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
-                                          primary: Color(
-                                              0xFFF80C5BFFF), // Set the gradient colors here
+                                          primary: Colors.red[400]!.withOpacity(0.8), // Set the gradient colors here
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                               bottomRight: Radius.circular(8.0),
@@ -254,13 +255,16 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                           child: Text(
                                             'Recommendations', // Add the desired text here
                                             style: TextStyle(
-                                              fontSize: 25,
+                                              fontSize: 22,
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.white,
+                                              color: Colors.black,
                                             ),
                                           ),
                                         ),
                                       ),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
                                     ),
                                     FractionallySizedBox(
                                       widthFactor: 0.85,
@@ -275,8 +279,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
-                                          primary: Color(
-                                              0xFFF80F5BFFF), // Set the gradient colors here
+                                          primary: Colors.red[400]!.withOpacity(0.8), // Set the gradient colors here
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                               bottomRight: Radius.circular(8.0),
@@ -295,9 +298,9 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                           child: Text(
                                             'Blood Analysis', // Add the desired text here
                                             style: TextStyle(
-                                              fontSize: 25,
+                                              fontSize: 22,
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.white,
+                                              color: Colors.black,
                                             ),
                                           ),
                                         ),
