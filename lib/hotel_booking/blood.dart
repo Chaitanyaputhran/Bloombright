@@ -9,12 +9,12 @@ class BloodType {
 
 class BloodT extends StatelessWidget {
   final List<BloodType> bloodTypes = [
-    BloodType('images/black.png', 'Blood that has taken longer to exit the uterus and has oxidized. Sometimes seen at the end of your period.'),
-    BloodType('images/brightred.png', 'This is the typical color at the start of your period. Indicates fresh blood and a healthy shedding of the uterine lining.'),
-    BloodType('images/brown.png', 'Blood that has been in the uterus longer before being expelled. Common towards the end of your period. May also appear at the beginning of your period.'),
-    BloodType('images/darkred.png', 'Dark red menstrual blood usually indicates older blood that has taken more time to exit the uterus, often observed towards the end of your period. While generally normal, abrupt changes in color or flow should be discussed with a healthcare professional.'),
-    BloodType('images/grey.png', 'Uncommon and may indicate infection. Should be discussed with a healthcare provider.'),
-    BloodType('images/orange.png', 'Uncommon and may indicate infection or an issue with cervical fluids mixing with blood. Should be discussed with a healthcare provider.'),
+    BloodType('images/black-removebg-preview.png', 'Blood that has taken longer to exit the uterus and has oxidized. Sometimes seen at the end of your period.'),
+    BloodType('images/brightred-removebg-preview.png', 'This is the typical color at the start of your period. Indicates fresh blood and a healthy shedding of the uterine lining.'),
+    BloodType('images/brown-removebg-preview.png', 'Blood that has been in the uterus longer before being expelled. Common towards the end of your period. May also appear at the beginning of your period.'),
+    BloodType('images/darkred-removebg-preview.png', 'Dark red menstrual blood usually indicates older blood that has taken more time to exit the uterus, often observed towards the end of your period. While generally normal, abrupt changes in color or flow should be discussed with a healthcare professional.'),
+    BloodType('images/grey-removebg-preview.png', 'Uncommon and may indicate infection. Should be discussed with a healthcare provider.'),
+    BloodType('images/orange-removebg-preview.png', 'Uncommon and may indicate infection or an issue with cervical fluids mixing with blood. Should be discussed with a healthcare provider.'),
   ];
 
   @override
@@ -53,23 +53,32 @@ class BloodTypeCard extends StatelessWidget {
     return Card(
       elevation: 4,
       margin: EdgeInsets.all(16),
-      child: Column(
-        children: [
-          Image.asset(
-            bloodType.imagePath,
-            width: 150,
-            height: 150,
-            fit: BoxFit.contain,
-          ),
-          Padding(
-            padding: EdgeInsets.all(16),
-            child: Text(
-              bloodType.description,
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 16),
+      shape: RoundedRectangleBorder( // Adding rounded rectangle border
+        borderRadius: BorderRadius.circular(30),
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.red[400]!.withOpacity(0.8),
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: Column(
+          children: [
+            Image.asset(
+              bloodType.imagePath,
+              width: 150,
+              height: 150,
+              fit: BoxFit.contain,
             ),
-          ),
-        ],
+            Padding(
+              padding: EdgeInsets.all(16),
+              child: Text(
+                bloodType.description,
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

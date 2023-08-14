@@ -251,7 +251,7 @@ class _MenstrualHealthPredictionScreenState
                         ),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 60),
                   ],
                 ),
               ),
