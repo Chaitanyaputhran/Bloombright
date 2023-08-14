@@ -1,7 +1,7 @@
 import 'package:best_flutter_ui_templates/hotel_booking/blood.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/calendar_popup_view.dart';
+import 'package:best_flutter_ui_templates/hotel_booking/custom_calendar.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/hotel_list_view.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/menorrhagia.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/model/hotel_list_data.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/model/notes.dart';
 import 'package:best_flutter_ui_templates/hotel_booking/recommendations/recommended.dart';
@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'filters_screen.dart';
 import 'hotel_app_theme.dart';
+import 'package:best_flutter_ui_templates/hotel_booking/custom_calendar.dart';
 
 class HotelHomeScreen extends StatefulWidget {
   @override
@@ -17,12 +18,11 @@ class HotelHomeScreen extends StatefulWidget {
 
 class _HotelHomeScreenState extends State<HotelHomeScreen>
     with TickerProviderStateMixin {
+  DateTime startDate = DateTime.now();
+  DateTime endDate = DateTime.now().add(const Duration(days: 5));
   AnimationController? animationController;
   List<HotelListData> hotelList = HotelListData.hotelList;
   final ScrollController _scrollController = ScrollController();
-
-  DateTime startDate = DateTime.now();
-  DateTime endDate = DateTime.now().add(const Duration(days: 5));
 
   @override
   void initState() {
@@ -76,19 +76,22 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                     : hotelList.length;
                                 final int index = entry.key;
                                 final Animation<double> animation =
-                                    Tween<double>(begin: 0.0, end: 1.0).animate(
-                                        CurvedAnimation(
-                                            parent: animationController!,
-                                            curve: Interval(
-                                                (1 / count) * index, 1.0,
-                                                curve: Curves.fastOutSlowIn)));
+                                Tween<double>(begin: 0.0, end: 1.0).animate(
+                                  CurvedAnimation(
+                                    parent: animationController!,
+                                    curve: Interval(
+                                      (1 / count) * index,
+                                      1.0,
+                                      curve: Curves.fastOutSlowIn,
+                                    ),
+                                  ),
+                                );
                                 animationController?.forward();
                                 return Column(
                                   children: [
                                     SizedBox(
                                       height: 15,
                                     ),
-                                    // Specify the desired height for the card
                                     HotelListView(
                                       callback: () {},
                                       hotelData: entry.value,
@@ -96,7 +99,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                       animationController: animationController!,
                                     ),
                                     SizedBox(
-                                      height: 5,
+                                      height: 10,
                                     ),
                                     Row(
                                       children: [
@@ -111,27 +114,40 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.only(
                                                 bottomRight:
-                                                    Radius.circular(54.0),
+                                                Radius.circular(54.0),
                                                 bottomLeft:
-                                                    Radius.circular(54.0),
+                                                Radius.circular(54.0),
                                                 topLeft: Radius.circular(54.0),
                                                 topRight: Radius.circular(54.0),
                                               ),
                                             ),
-                                            color: Colors
-                                                .white, // Set the gradient colors here
+                                            color: Colors.white,
                                             child: Padding(
-                                              padding:
-                                                  const EdgeInsets.only(left: 20, right:8, top:8, bottom:8),
-                                              child: Center(
-                                                child: Text(
-                                                  'Ovulation Aug 24', // Add the desired text here
-                                                  style: TextStyle(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Colors.black,
+                                              padding: const EdgeInsets.only(
+                                                  left: 20,
+                                                  right: 8,
+                                                  top: 8,
+                                                  bottom: 8),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    'Ovulation Date:',
+                                                    style: TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.black,
+                                                    ),
                                                   ),
-                                                ),
+                                                  Text(
+                                                    '${startDate.add(Duration(days: 14)).toString()}',
+                                                    style: TextStyle(
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.black,
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
                                             ),
                                           ),
@@ -147,27 +163,40 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.only(
                                                 bottomRight:
-                                                    Radius.circular(54.0),
+                                                Radius.circular(54.0),
                                                 bottomLeft:
-                                                    Radius.circular(54.0),
+                                                Radius.circular(54.0),
                                                 topLeft: Radius.circular(54.0),
                                                 topRight: Radius.circular(54.0),
                                               ),
                                             ),
-                                            color: Colors
-                                                .white, // Set the gradient colors here
+                                            color: Colors.white,
                                             child: Padding(
-                                              padding:
-                                              const EdgeInsets.only(left: 40, right:8, top:8, bottom:8),
-                                              child: Center(
-                                                child: Text(
-                                                  'Alert         Sep 03', // Add the desired text here
-                                                  style: TextStyle(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Colors.black,
+                                              padding: const EdgeInsets.only(
+                                                  left: 20,
+                                                  right: 8,
+                                                  top: 8,
+                                                  bottom: 8),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    'Alert Date:',
+                                                    style: TextStyle(
+                                                      fontSize: 16,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.black,
+                                                    ),
                                                   ),
-                                                ),
+                                                  Text(
+                                                    '${startDate.add(Duration(days: 28)).toString()}',
+                                                    style: TextStyle(
+                                                      fontSize: 18,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Colors.black,
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
                                             ),
                                           ),
@@ -178,7 +207,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                       ],
                                     ),
                                     SizedBox(
-                                      height: 5,
+                                      height: 20,
                                     ),
                                     FractionallySizedBox(
                                       widthFactor: 0.85,
@@ -187,13 +216,13 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder: (context) =>
-                                                    NotesPage()),
+                                              builder: (context) => NotesPage(),
+                                            ),
                                           );
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
-                                          primary: Colors.red[400]!.withOpacity(0.8), // Set the gradient colors here
+                                          primary: Color(0xFFF80F5BFFF),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                               bottomRight: Radius.circular(8.0),
@@ -210,61 +239,15 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                               right: 16,
                                               bottom: 8),
                                           child: Text(
-                                            'Notes', // Add the desired text here
+                                            'Notes',
                                             style: TextStyle(
-                                              fontSize: 22,
+                                              fontSize: 25,
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.black,
+                                              color: Colors.white,
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    FractionallySizedBox(
-                                      widthFactor:
-                                          0.85, // Increase the width by 20%
-                                      child: ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) => MenorrhagiaScreen()),
-                                          );
-                                        },
-                                        style: ElevatedButton.styleFrom(
-                                          elevation: 8.0,
-                                          primary: Colors.red[400]!.withOpacity(0.8), // Set the gradient colors here
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.only(
-                                              bottomRight: Radius.circular(8.0),
-                                              bottomLeft: Radius.circular(8.0),
-                                              topLeft: Radius.circular(54.0),
-                                              topRight: Radius.circular(54.0),
-                                            ),
-                                          ),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(
-                                              top: 24,
-                                              left: 16,
-                                              right: 16,
-                                              bottom: 8),
-                                          child: Text(
-                                            'Recommendations', // Add the desired text here
-                                            style: TextStyle(
-                                              fontSize: 22,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
                                     ),
                                     FractionallySizedBox(
                                       widthFactor: 0.85,
@@ -273,13 +256,14 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder: (context) =>
-                                                    BloodT()),
+                                              builder: (context) =>
+                                                  RecomendedScreen(),
+                                            ),
                                           );
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
-                                          primary: Colors.red[400]!.withOpacity(0.8), // Set the gradient colors here
+                                          primary: Color(0xFFF80C5BFFF),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                               bottomRight: Radius.circular(8.0),
@@ -296,11 +280,51 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                               right: 16,
                                               bottom: 8),
                                           child: Text(
-                                            'Blood Analysis', // Add the desired text here
+                                            'Recommendations',
                                             style: TextStyle(
-                                              fontSize: 22,
+                                              fontSize: 25,
                                               fontWeight: FontWeight.bold,
-                                              color: Colors.black,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    FractionallySizedBox(
+                                      widthFactor: 0.85,
+                                      child: ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => BloodT(),
+                                            ),
+                                          );
+                                        },
+                                        style: ElevatedButton.styleFrom(
+                                          elevation: 8.0,
+                                          primary: Color(0xFFF80F5BFFF),
+                                          shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.only(
+                                              bottomRight: Radius.circular(8.0),
+                                              bottomLeft: Radius.circular(8.0),
+                                              topLeft: Radius.circular(54.0),
+                                              topRight: Radius.circular(54.0),
+                                            ),
+                                          ),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 24,
+                                              left: 16,
+                                              right: 16,
+                                              bottom: 8),
+                                          child: Text(
+                                            'Blood Analysis',
+                                            style: TextStyle(
+                                              fontSize: 25,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.white,
                                             ),
                                           ),
                                         ),
@@ -330,7 +354,6 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
       builder: (BuildContext context) => CalendarPopupView(
         barrierDismissible: true,
         minimumDate: DateTime.now(),
-        //  maximumDate: DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day + 10),
         initialEndDate: endDate,
         initialStartDate: startDate,
         onApplyClick: (DateTime startData, DateTime endData) {
@@ -350,9 +373,10 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
         color: Color(0xffF7EBE1),
         boxShadow: <BoxShadow>[
           BoxShadow(
-              color: Colors.grey.withOpacity(0.2),
-              offset: const Offset(0, 2),
-              blurRadius: 8.0),
+            color: Colors.grey.withOpacity(0.2),
+            offset: const Offset(0, 2),
+            blurRadius: 8.0,
+          ),
         ],
       ),
       child: Padding(
@@ -398,14 +422,55 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
 
 class ContestTabHeader extends SliverPersistentHeaderDelegate {
   ContestTabHeader(
-    this.searchUI,
-  );
+      this.searchUI,
+      this.startDate,
+      this.endDate,
+      );
   final Widget searchUI;
+  final DateTime startDate;
+  final DateTime endDate;
 
   @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return searchUI;
+    DateTime ovulationDate = startDate.add(Duration(days: 14));
+
+    return Column(
+      children: [
+        SizedBox(height: 10),
+        SizedBox(
+          height: 125,
+          width: 160,
+          child: Card(
+            elevation: 8.0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(54.0),
+                bottomLeft: Radius.circular(54.0),
+                topLeft: Radius.circular(54.0),
+                topRight: Radius.circular(54.0),
+              ),
+            ),
+            color: Colors.white,
+            child: Padding(
+              padding:
+              const EdgeInsets.only(left: 20, right: 8, top: 8, bottom: 8),
+              child: Center(
+                child: Text(
+                  'Ovulation Date: ${ovulationDate.toString()}',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(width: 10),
+      ],
+    );
   }
 
   @override
