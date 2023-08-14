@@ -1,15 +1,16 @@
-import 'package:best_flutter_ui_templates/hotel_booking/blood.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/calendar_popup_view.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/custom_calendar.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/hotel_list_view.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/model/hotel_list_data.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/model/notes.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/recommendations/recommended.dart';
+import 'package:BloomBright/hotel_booking/blood.dart';
+import 'package:BloomBright/hotel_booking/calendar_popup_view.dart';
+import 'package:BloomBright/hotel_booking/custom_calendar.dart';
+import 'package:BloomBright/hotel_booking/hotel_list_view.dart';
+import 'package:BloomBright/hotel_booking/menorrhagia.dart';
+import 'package:BloomBright/hotel_booking/model/hotel_list_data.dart';
+import 'package:BloomBright/hotel_booking/model/notes.dart';
+import 'package:BloomBright/hotel_booking/recommendations/recommended.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'filters_screen.dart';
 import 'hotel_app_theme.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/custom_calendar.dart';
+import 'package:BloomBright/hotel_booking/custom_calendar.dart';
 
 class HotelHomeScreen extends StatefulWidget {
   @override
@@ -99,55 +100,65 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                       animationController: animationController!,
                                     ),
                                     SizedBox(
-                                      height: 10,
+                                      height: 5,
                                     ),
                                     Row(
                                       children: [
                                         SizedBox(
                                           width: 15,
                                         ),
-                                        SizedBox(
-                                          height: 125,
-                                          width: 160,
-                                          child: Card(
-                                            elevation: 8.0,
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.only(
-                                                bottomRight:
-                                                Radius.circular(54.0),
-                                                bottomLeft:
-                                                Radius.circular(54.0),
-                                                topLeft: Radius.circular(54.0),
-                                                topRight: Radius.circular(54.0),
+                                        Center(
+                                          child: SizedBox(
+                                            height: 125,
+                                            width: 160,
+                                            child: Card(
+                                              elevation: 8.0,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.only(
+                                                  bottomRight:
+                                                  Radius.circular(54.0),
+                                                  bottomLeft:
+                                                  Radius.circular(54.0),
+                                                  topLeft: Radius.circular(54.0),
+                                                  topRight: Radius.circular(54.0),
+                                                ),
                                               ),
-                                            ),
-                                            color: Colors.white,
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 20,
-                                                  right: 8,
-                                                  top: 8,
-                                                  bottom: 8),
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    'Ovulation Date:',
-                                                    style: TextStyle(
-                                                      fontSize: 16,
-                                                      fontWeight: FontWeight.bold,
-                                                      color: Colors.black,
+                                              color: Colors.white,
+                                              child: SizedBox(
+                                                child: Padding(
+                                                  padding: const EdgeInsets.only(
+                                                      left: 20,
+                                                      right: 8,
+                                                      top: 33,
+                                                      bottom: 8),
+                                                  child: Center(
+                                                    child: Column(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Center(
+                                                          child: Text(
+                                                            'Ovulation Date',
+                                                            style: TextStyle(
+                                                              fontSize: 16,
+                                                              fontWeight: FontWeight.bold,
+                                                              color: Colors.black,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Center(
+                                                          child: Text(
+                                                            '${startDate.add(Duration(days: 14)).toLocal().toString().split(' ')[0]}',
+                                                            style: TextStyle(
+                                                              fontSize: 18,
+                                                              fontWeight: FontWeight.bold,
+                                                              color: Colors.black,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
-                                                  Text(
-                                                    '${startDate.add(Duration(days: 14)).toString()}',
-                                                    style: TextStyle(
-                                                      fontSize: 18,
-                                                      fontWeight: FontWeight.bold,
-                                                      color: Colors.black,
-                                                    ),
-                                                  ),
-                                                ],
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -175,13 +186,13 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                               padding: const EdgeInsets.only(
                                                   left: 20,
                                                   right: 8,
-                                                  top: 8,
+                                                  top: 33,
                                                   bottom: 8),
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    'Alert Date:',
+                                                    'Alert Date',
                                                     style: TextStyle(
                                                       fontSize: 16,
                                                       fontWeight: FontWeight.bold,
@@ -189,7 +200,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                                     ),
                                                   ),
                                                   Text(
-                                                    '${startDate.add(Duration(days: 28)).toString()}',
+                                                    '${startDate.add(Duration(days: 28)).toLocal().toString().split(' ')[0]}',
                                                     style: TextStyle(
                                                       fontSize: 18,
                                                       fontWeight: FontWeight.bold,
@@ -207,7 +218,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                       ],
                                     ),
                                     SizedBox(
-                                      height: 20,
+                                      height: 5,
                                     ),
                                     FractionallySizedBox(
                                       widthFactor: 0.85,
@@ -222,7 +233,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
-                                          primary: Color(0xFFF80F5BFFF),
+                                          primary: Colors.red[400]!.withOpacity(0.8),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                               bottomRight: Radius.circular(8.0),
@@ -249,6 +260,9 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                         ),
                                       ),
                                     ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
                                     FractionallySizedBox(
                                       widthFactor: 0.85,
                                       child: ElevatedButton(
@@ -257,13 +271,13 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                             context,
                                             MaterialPageRoute(
                                               builder: (context) =>
-                                                  RecomendedScreen(),
+                                                  MenorrhagiaScreen(),
                                             ),
                                           );
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
-                                          primary: Color(0xFFF80C5BFFF),
+                                          primary: Colors.red[400]!.withOpacity(0.8),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                               bottomRight: Radius.circular(8.0),
@@ -290,6 +304,9 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                         ),
                                       ),
                                     ),
+                                    SizedBox(
+                                      height: 5,
+                                    ),
                                     FractionallySizedBox(
                                       widthFactor: 0.85,
                                       child: ElevatedButton(
@@ -303,7 +320,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                                         },
                                         style: ElevatedButton.styleFrom(
                                           elevation: 8.0,
-                                          primary: Color(0xFFF80F5BFFF),
+                                          primary: Colors.red[400]!.withOpacity(0.8),
                                           shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.only(
                                               bottomRight: Radius.circular(8.0),

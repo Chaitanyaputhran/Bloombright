@@ -1,7 +1,7 @@
 import 'dart:io';
-import 'package:best_flutter_ui_templates/app_theme.dart';
-import 'package:best_flutter_ui_templates/fitness_app/fitness_app_home_screen.dart';
-import 'package:best_flutter_ui_templates/introduction_animation/introduction_animation_screen.dart';
+import 'package:BloomBright/app_theme.dart';
+import 'package:BloomBright/fitness_app/fitness_app_home_screen.dart';
+import 'package:BloomBright/introduction_animation/introduction_animation_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';

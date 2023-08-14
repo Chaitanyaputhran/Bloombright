@@ -1,5 +1,5 @@
-import 'package:best_flutter_ui_templates/hotel_booking/custom_calendar.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/hotel_app_theme.dart';
+import 'package:BloomBright/hotel_booking/custom_calendar.dart';
+import 'package:BloomBright/hotel_booking/hotel_app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';

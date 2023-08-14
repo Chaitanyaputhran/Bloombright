@@ -1,5 +1,5 @@
 import 'package:animations/animations.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/Login/mainScreen.dart';
+import 'package:BloomBright/hotel_booking/Login/mainScreen.dart';
 import 'package:flutter/material.dart';
 import '../../fitness_app/fitness_app_home_screen.dart';
 import '../../hotel_booking/hotel_home_screen.dart';

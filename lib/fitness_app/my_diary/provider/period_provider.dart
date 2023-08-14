@@ -1,4 +1,4 @@
-import 'package:best_flutter_ui_templates/fitness_app/my_diary/model/period.dart';
+import 'package:BloomBright/fitness_app/my_diary/model/period.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';

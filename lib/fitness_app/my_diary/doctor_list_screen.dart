@@ -1,6 +1,6 @@
-import 'package:best_flutter_ui_templates/fitness_app/my_diary/Constant/doctorDetails.dart';
-import 'package:best_flutter_ui_templates/fitness_app/my_diary/model/doctor.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/provider/custom_url_launcher.dart';
+import 'package:BloomBright/fitness_app/my_diary/Constant/doctorDetails.dart';
+import 'package:BloomBright/fitness_app/my_diary/model/doctor.dart';
+import 'package:BloomBright/hotel_booking/provider/custom_url_launcher.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

@@ -1,4 +1,4 @@
-import 'package:best_flutter_ui_templates/main.dart';
+import 'package:BloomBright/main.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import '../fitness_app_theme.dart';

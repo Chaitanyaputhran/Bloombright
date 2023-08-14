@@ -1,6 +1,6 @@
-import 'package:best_flutter_ui_templates/hotel_booking/Login/create.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/Login/details.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/Login/login.dart';
+import 'package:BloomBright/hotel_booking/Login/create.dart';
+import 'package:BloomBright/hotel_booking/Login/details.dart';
+import 'package:BloomBright/hotel_booking/Login/login.dart';
 import 'package:flutter/material.dart';
 
 Map<String, Widget Function(BuildContext)> routeTable = {

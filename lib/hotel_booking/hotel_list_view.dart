@@ -1,7 +1,7 @@
-import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
-import 'package:best_flutter_ui_templates/fitness_app/my_diary/doctorcard.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/calendar_popup_view.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/hotel_app_theme.dart';
+import 'package:BloomBright/fitness_app/fitness_app_theme.dart';
+import 'package:BloomBright/fitness_app/my_diary/doctorcard.dart';
+import 'package:BloomBright/hotel_booking/calendar_popup_view.dart';
+import 'package:BloomBright/hotel_booking/hotel_app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -73,10 +73,7 @@ class _HotelListViewState extends State<HotelListView> {
                 },
                 child: Container(
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                      FitnessAppTheme.nearlyDarkBlue,
-                      HexColor("#6F56E8")
-                    ], begin: Alignment.topLeft, end: Alignment.bottomRight),
+                    color: Colors.red[300]!.withOpacity(0.6),
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(8.0),
                       bottomLeft: Radius.circular(8.0),
@@ -97,6 +94,9 @@ class _HotelListViewState extends State<HotelListView> {
                       children: <Widget>[
                         Column(
                           children: <Widget>[
+                            SizedBox(
+                              height: 10,
+                            ),
                             AspectRatio(
                               aspectRatio: 2,
                               child: Image.asset(
@@ -105,8 +105,7 @@ class _HotelListViewState extends State<HotelListView> {
                               ),
                             ),
                             Container(
-                              color: HotelAppTheme.buildLightTheme()
-                                  .backgroundColor,
+                              color: Colors.red[300]!.withOpacity(0.6),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.start,

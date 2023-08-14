@@ -39,13 +39,16 @@ class _InputPageState extends State<InputPage> {
         children: <Widget>[
           Expanded(
             child: ResuableCard(
-              colour: kactiveCardColor,
+              colour: Colors.red[400]!.withOpacity(0.8),
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
                     'HEIGHT',
-                    style: klabelTextStyle,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                    ),
                   ),
                   Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -58,14 +61,16 @@ class _InputPageState extends State<InputPage> {
                         ),
                         Text(
                           'cm',
-                          style: klabelTextStyle,
+                          style: TextStyle(
+                              color: Colors.black
+                          ),
                         )
                       ]),
                   Slider(
                     value: height.toDouble(),
                     min: 120.0,
                     max: 220.0,
-                    activeColor: Color(0xFFE896AF),
+                    activeColor: Colors.deepPurple,
                     inactiveColor: Color(0xFFB9BCC4),
                     onChanged: (double newValue) {
                       setState(() {
@@ -82,13 +87,16 @@ class _InputPageState extends State<InputPage> {
               children: <Widget>[
                 Expanded(
                   child: ResuableCard(
-                    colour: kactiveCardColor,
+                    colour: Colors.red[400]!.withOpacity(0.8),
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
                           'WEIGHT',
-                          style: klabelTextStyle,
+                            style: TextStyle(
+                                color: Colors.black,
+                              fontSize: 25,
+                            ),
                         ),
                         Text(
                           weight.toString(),
@@ -123,13 +131,16 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: ResuableCard(
-                    colour: kactiveCardColor,
+                    colour: Colors.red[400]!.withOpacity(0.8),
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
                           'AGE',
-                          style: klabelTextStyle,
+                            style: TextStyle(
+                                color: Colors.black,
+                              fontSize: 25,
+                            ),
                         ),
                         Text(
                           age.toString(),

@@ -1,11 +1,11 @@
-import 'package:best_flutter_ui_templates/fitness_app/MAchinefitness.dart';
-import 'package:best_flutter_ui_templates/fitness_app/models/tabIcon_data.dart';
-import 'package:best_flutter_ui_templates/fitness_app/training/training_screen.dart';
+import 'package:BloomBright/fitness_app/MAchinefitness.dart';
+import 'package:BloomBright/fitness_app/models/tabIcon_data.dart';
+import 'package:BloomBright/fitness_app/training/training_screen.dart';
 import 'package:flutter/material.dart';
 import 'bottom_navigation_view/bottom_bar_view.dart';
 import 'fitness_app_theme.dart';
 import 'my_diary/my_diary_screen.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/hotel_home_screen.dart';
+import 'package:BloomBright/hotel_booking/hotel_home_screen.dart';
 
 class FitnessAppHomeScreen extends StatefulWidget {
   @override

@@ -1,5 +1,5 @@
-import 'package:best_flutter_ui_templates/fitness_app/fitness_app_home_screen.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/provider/auth_provider.dart';
+import 'package:BloomBright/fitness_app/fitness_app_home_screen.dart';
+import 'package:BloomBright/hotel_booking/provider/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:lottie/lottie.dart';

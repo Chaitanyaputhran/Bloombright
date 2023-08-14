@@ -1,4 +1,4 @@
-import 'package:best_flutter_ui_templates/hotel_booking/provider/auth_provider.dart';
+import 'package:BloomBright/hotel_booking/provider/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';

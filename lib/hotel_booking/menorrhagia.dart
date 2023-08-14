@@ -1,5 +1,5 @@
-import 'package:best_flutter_ui_templates/fitness_app/my_diary/doctorcard.dart';
-import 'package:best_flutter_ui_templates/hotel_booking/recommendations/recommended.dart';
+import 'package:BloomBright/fitness_app/my_diary/doctorcard.dart';
+import 'package:BloomBright/hotel_booking/recommendations/recommended.dart';
 import 'package:flutter/material.dart';
 
 

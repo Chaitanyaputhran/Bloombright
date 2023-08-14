@@ -1,5 +1,5 @@
-import 'package:best_flutter_ui_templates/fitness_app/fitness_app_theme.dart';
-import 'package:best_flutter_ui_templates/fitness_app/my_diary/doctor_list_screen.dart';
+import 'package:BloomBright/fitness_app/fitness_app_theme.dart';
+import 'package:BloomBright/fitness_app/my_diary/doctor_list_screen.dart';
 import 'package:flutter/material.dart';
 
 class DoctorCard extends StatelessWidget {

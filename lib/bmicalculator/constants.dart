@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const klabelTextStyle=TextStyle(
   fontSize: 18.0,
-  color: Color(0xFFF5E3CE),
+  color: Colors.white,
 
 );
 const kbottomContainerHeight= 80.0;
