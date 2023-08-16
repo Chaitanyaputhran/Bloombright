@@ -54,16 +54,16 @@ class _MenstrualHealthPredictionScreenState
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = jsonDecode(response.body);
-        return healthStatusOptions[randomIndex];
+        return data[response.body];
       } else {
         // Handle API error here
         print("Error: ${response.statusCode}");
-        return healthStatusOptions[randomIndex];
+        
       }
     } catch (e) {
       // Handle network or other errors here
       print("Error: $e");
-      return healthStatusOptions[randomIndex];
+    
     }
   }
 
