@@ -47,11 +47,7 @@ class _MenstrualHealthPredictionScreenState
       "spotting": selectedSpotting?.toLowerCase() == 'yes' ?? false,
     });
 
-    List<String> healthStatusOptions = [
-      'Overall, the menstrual cycle appears healthy and within normal parameters.',
-      'While some irregularity is present, no alarming health issues are apparent in the menstrual cycle.',
-      'The menstrual cycle shows mild irregularity, but it is not indicative of any major health problems.',
-    ];
+   
 
     Random random = Random();
     int randomIndex = random.nextInt(healthStatusOptions.length);
