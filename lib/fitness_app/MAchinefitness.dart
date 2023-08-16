@@ -49,9 +49,6 @@ class _MenstrualHealthPredictionScreenState
 
    
 
-    Random random = Random();
-    int randomIndex = random.nextInt(healthStatusOptions.length);
-
     try {
       final response = await http.post(Uri.parse(apiUrl), headers: headers, body: body);
 
