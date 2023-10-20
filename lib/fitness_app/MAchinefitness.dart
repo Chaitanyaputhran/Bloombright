@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-
 void main() {
   runApp(MaterialApp(
     home: MenstrualHealthPredictionScreen(),
@@ -34,7 +33,8 @@ class _MenstrualHealthPredictionScreenState
   final List<String> flowAmountOptions = ['Heavy', 'Light', 'Moderate'];
 
   Future<String> predictHealth() async {
-    final apiUrl = 'https://4146-103-89-235-71.ngrok-free.app/predict'; // Replace with your Flask API URL
+    final apiUrl =
+        'https://4146-103-89-235-71.ngrok-free.app/predict'; // Replace with your Flask API URL
 
     final headers = {'Content-Type': 'application/json'};
     final body = jsonEncode({
@@ -47,23 +47,20 @@ class _MenstrualHealthPredictionScreenState
       "spotting": selectedSpotting?.toLowerCase() == 'yes' ?? false,
     });
 
-   
-
     try {
-      final response = await http.post(Uri.parse(apiUrl), headers: headers, body: body);
+      final response =
+          await http.post(Uri.parse(apiUrl), headers: headers, body: body);
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = jsonDecode(response.body);
         return data[response.body];
       } else {
         // Handle API error here
-        print("Error: ${response.statusCode}");
-        
+        return ("Error: ${response.statusCode}");
       }
     } catch (e) {
       // Handle network or other errors here
-      print("Error: $e");
-    
+      return ("Error: $e");
     }
   }
 
@@ -86,11 +83,11 @@ class _MenstrualHealthPredictionScreenState
   }
 
   Widget buildOptionRow(
-      String title,
-      List<String> options,
-      String? selectedValue,
-      Function(String?) onSelect,
-      ) {
+    String title,
+    List<String> options,
+    String? selectedValue,
+    Function(String?) onSelect,
+  ) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -111,7 +108,8 @@ class _MenstrualHealthPredictionScreenState
                 decoration: BoxDecoration(
                   color: isSelected ? optionColor : Colors.pink,
                   borderRadius: BorderRadius.circular(100),
-                  border: Border.all(color: isSelected ? Colors.blue : Colors.pink),
+                  border:
+                      Border.all(color: isSelected ? Colors.blue : Colors.pink),
                 ),
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                 child: ChoiceChip(
@@ -136,15 +134,16 @@ class _MenstrualHealthPredictionScreenState
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Menstrual Health Prediction',
-        style: TextStyle(
-          color: Colors.black,
-        ),),
+        title: Text(
+          'Menstrual Health Prediction',
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -164,54 +163,70 @@ class _MenstrualHealthPredictionScreenState
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    buildOptionRow('What is the colour of the blood', colorOptions, selectedColor, (value) {
+                    buildOptionRow('What is the colour of the blood',
+                        colorOptions, selectedColor, (value) {
                       setState(() {
                         selectedColor = value;
                       });
                     }),
                     SizedBox(height: 20),
                     buildOptionRow(
-                      'Specify your period length', periodLengthOptions, selectedPeriodLength, (value) {
-                      setState(() {
-                        selectedPeriodLength = value;
-                      });
-                    },
+                      'Specify your period length',
+                      periodLengthOptions,
+                      selectedPeriodLength,
+                      (value) {
+                        setState(() {
+                          selectedPeriodLength = value;
+                        });
+                      },
                     ),
                     SizedBox(height: 20),
-                    buildOptionRow('Do you see irregularity in your periods', yesNoOptions, selectedIrregular, (value) {
+                    buildOptionRow('Do you see irregularity in your periods',
+                        yesNoOptions, selectedIrregular, (value) {
                       setState(() {
                         selectedIrregular = value;
                       });
                     }),
                     SizedBox(height: 20),
                     buildOptionRow(
-                      'What is your Menstrual Pain', menstrualPainOptions, selectedMenstrualPain, (value) {
-                      setState(() {
-                        selectedMenstrualPain = value;
-                      });
-                    },
+                      'What is your Menstrual Pain',
+                      menstrualPainOptions,
+                      selectedMenstrualPain,
+                      (value) {
+                        setState(() {
+                          selectedMenstrualPain = value;
+                        });
+                      },
                     ),
                     SizedBox(height: 20),
                     buildOptionRow(
-                      'What is the Flow Amount', flowAmountOptions, selectedFlowAmount, (value) {
-                      setState(() {
-                        selectedFlowAmount = value;
-                      });
-                    },
+                      'What is the Flow Amount',
+                      flowAmountOptions,
+                      selectedFlowAmount,
+                      (value) {
+                        setState(() {
+                          selectedFlowAmount = value;
+                        });
+                      },
                     ),
                     SizedBox(height: 20),
-                    buildOptionRow('Do you see Clotting?', yesNoOptions, selectedClotting, (value) {
+                    buildOptionRow(
+                        'Do you see Clotting?', yesNoOptions, selectedClotting,
+                        (value) {
                       setState(() {
                         selectedClotting = value;
                       });
                     }),
                     SizedBox(height: 20),
                     buildOptionRow(
-                      'Do you see Spotting?', yesNoOptions, selectedSpotting, (value) {
-                      setState(() {
-                        selectedSpotting = value;
-                      });
-                    },
+                      'Do you see Spotting?',
+                      yesNoOptions,
+                      selectedSpotting,
+                      (value) {
+                        setState(() {
+                          selectedSpotting = value;
+                        });
+                      },
                     ),
                     SizedBox(height: 20),
                     ElevatedButton(
@@ -241,7 +256,8 @@ class _MenstrualHealthPredictionScreenState
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 16, horizontal: 32),
                         elevation: 4,
                         textStyle: TextStyle(
                           fontWeight: FontWeight.bold,
