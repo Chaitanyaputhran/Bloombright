@@ -2,48 +2,108 @@ import '../model/doctor.dart';
 
 final doctorDetail = [
   Doctor(
-      name: "Dr. Shashi Choudhari",
+      name: "Dr. Ritu Verma",
       isAvailable: true,
       location: "Noida",
-      phone: 8792620374),
+      phone: 9834758291),
   Doctor(
-      name: "Dr. Kiran Guglani",
+      name: "Dr. Sanjay Kapoor",
       isAvailable: false,
       location: "Delhi",
-      phone: 8660527370),
+      phone: 7392857385),
   Doctor(
-      name: "Dr. Manjula Lakhanpal",
+      name: "Dr. Akanksha Sharma",
       isAvailable: true,
       location: "Delhi",
-      phone: 8431670279),
+      phone: 9283748592),
   Doctor(
-      name: "Dr. Anjali Gupta",
+      name: "Dr. Prachi Singh",
       isAvailable: true,
       location: "Delhi",
-      phone: 8431678372),
+      phone: 7485928593),
   Doctor(
-      name: "Dr. Meenal Garg",
+      name: "Dr. Reema Bhatia",
       isAvailable: true,
       location: "Delhi",
-      phone: 4826670279),
+      phone: 8957392847),
   Doctor(
-      name: "Dr. Kashika Singh",
+      name: "Dr. Shivani Chopra",
       isAvailable: true,
       location: "Noida",
-      phone: 8433758279),
+      phone: 7392847593),
   Doctor(
-      name: "Dr. Astha Agarwal",
+      name: "Dr. Ananya Khanna",
       isAvailable: true,
       location: "Noida",
-      phone: 1753670279),
+      phone: 8957392857),
   Doctor(
-      name: "Dr. Kavita Jain",
+      name: "Dr. Nidhi Verma",
       isAvailable: true,
       location: "Noida",
-      phone: 8431758279),
+      phone: 9284759392),
   Doctor(
-      name: "Dr. Geeta Jain",
+      name: "Dr. Pooja Singh",
       isAvailable: false,
       location: "Delhi",
-      phone: 9385670279),
+      phone: 7593847592),
+  Doctor(
+      name: "Dr. Vani Bajaj",
+      isAvailable: true,
+      location: "Delhi",
+      phone: 7593847592),
+  Doctor(
+      name: "Dr. Raghav Gupta",
+      isAvailable: true,
+      location: "Noida",
+      phone: 8937459281),
+  Doctor(
+      name: "Dr. Sonali Sharma",
+      isAvailable: false,
+      location: "Delhi",
+      phone: 7392847593),
+  Doctor(
+      name: "Dr. Priya Singhania",
+      isAvailable: true,
+      location: "Delhi",
+      phone: 9284759384),
+  Doctor(
+      name: "Dr. Rahul Kapoor",
+      isAvailable: true,
+      location: "Delhi",
+      phone: 7584938593),
+  Doctor(
+      name: "Dr. Deepika Reddy",
+      isAvailable: true,
+      location: "Delhi",
+      phone: 7583948593),
+  Doctor(
+      name: "Dr. Arjun Mehta",
+      isAvailable: true,
+      location: "Noida",
+      phone: 7584938593),
+  Doctor(
+      name: "Dr. Aisha Malik",
+      isAvailable: true,
+      location: "Noida",
+      phone: 9384759283),
+  Doctor(
+      name: "Dr. Sameer Gupta",
+      isAvailable: true,
+      location: "Noida",
+      phone: 7583948593),
+  Doctor(
+      name: "Dr. Nisha Reddy",
+      isAvailable: false,
+      location: "Delhi",
+      phone: 7584938593),
+  Doctor(
+      name: "Dr. Rohan Kapoor",
+      isAvailable: true,
+      location: "Delhi",
+      phone: 7583948593),
+  Doctor(
+      name: "Dr. Ishita Mehta",
+      isAvailable: true,
+      location: "Noida",
+      phone: 7584938593),
 ];
