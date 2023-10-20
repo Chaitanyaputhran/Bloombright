@@ -18,7 +18,7 @@ class BottomButton extends StatelessWidget {
               fontSize: 25.0,
             ),),
         ),
-        color: Colors.red[400]!.withOpacity(0.8),
+        color: Colors.teal[400]!.withOpacity(0.8),
         margin: EdgeInsets.only(top:10.0),
         width:double.infinity,
         height:kbottomContainerHeight,
