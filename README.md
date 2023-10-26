@@ -70,4 +70,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Thank you for choosing BloomBright! We hope the app helps you take charge of your menstrual health and overall wellness.
+Thank you for choosing BloomBright! We sincerely appreciate your trust in our app, and we  hope the app helps you take charge of your menstrual health and overall wellness.
