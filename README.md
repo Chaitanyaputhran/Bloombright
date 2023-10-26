@@ -68,6 +68,18 @@ If you encounter any technical issues or need assistance with the app, please co
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+## Contributors
+
+We would like to thank the following contributors for their valuable contributions to the development of BloomBright:
+
+- [Alriya Treeza D Souza](https://github.com/alriyadsouza)
+- [Chaitanya](https://github.com/Chaitanyaputhran)
+- [Ashal Pearl Dsouza](https://github.com/Ashaldsouza)
+- [Ishita Pathak](https://github.com/IshitaPathak)
+
+## Contributing
+
+We welcome all contributions that improve BloomBright and the overall experience for our users. If you wish to contribute, please follow the guidelines outlined in [CONTRIBUTING.md](CONTRIBUTING.md).
+
 
 Thank you for choosing BloomBright! We sincerely appreciate your trust in our app, and we  hope the app helps you take charge of your menstrual health and overall wellness.
