@@ -30,11 +30,11 @@
 <br>
 <p align='center'><img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/664aac3d-4323-414c-8774-937a6947bb3f" width=250>  <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/11d7be04-9242-4a9d-ac50-17a2326288d7" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/7dde6147-ed31-4ae1-8950-d1dea5649471" width=250></p>
 <br>
-<p align='center'> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/2b416432-cbca-4640-a83b-7311634afa7e" width=250> <img src="https://github.com/Chaitanyaputhran/Bloombright/blob/9b11929fb2c29f0d9c3434d103941dd3a2753134/assets/images/homescreen.jpeg" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/363dfb2e-d248-4778-92da-88995840942a" width=250></p>
+<p align='center'> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/2b416432-cbca-4640-a83b-7311634afa7e" width=250> <img src="https://github.com/alriyadsouza/Bloombright/assets/109797633/613b70f6-cbf0-48fe-940e-c2ca1f8b57f6" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/363dfb2e-d248-4778-92da-88995840942a" width=250></p>
 <br>
 <p align='center'> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/56a4e644-5413-45c1-9063-fbe20d72487b" width=250> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/26f31983-51b1-43c1-b3b9-561603771137" width=250>  <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/de3b8292-c836-44db-85e1-84d30988940b" width=250> </p>
 <br>
-<p align='center'> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/cdc3f589-8745-4750-97db-7285f3982630" width=250> <img src="https://github.com/Chaitanyaputhran/Bloombright/blob/4811b39e438239d77de6772659c682ec2031c482/assets/images/bmi.jpeg" width=250> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/f628dacc-b384-4ef6-87e2-af6fb5558936" width=250></p>
+<p align='center'> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/cdc3f589-8745-4750-97db-7285f3982630" width=250> <img src="https://github.com/alriyadsouza/Bloombright/assets/109797633/bb29586f-49d5-438c-9a6e-dae7e250f4f5" width=250> <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/f628dacc-b384-4ef6-87e2-af6fb5558936" width=250></p>
 
 ## Getting Started
 
