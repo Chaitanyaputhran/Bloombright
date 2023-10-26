@@ -6,11 +6,12 @@
 
 1. [Introduction](#introduction)
 2. [Features](#features)
-3. [Screenshots](#screenshots)
+3. [Snapshots](#snapshots)
 4. [Getting Started](#getting-started)
 5. [Usage](#usage)
 6. [Feedback](#feedback)
 7. [Support](#support)
+8. [License](#license)
 
 ## Introduction
 
