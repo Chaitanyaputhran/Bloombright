@@ -24,7 +24,7 @@
 - User-friendly Interface: Enjoy an intuitive and visually appealing app design for a seamless experience.
 - Personalized Insights: Get tailored health insights and tips based on logged data.
 
-## Screenshots
+## Snapshots
 
 <p align='center'><img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/e2a3d818-ddf4-4426-8307-30fc45574154" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/52bdaa7f-31fb-42b4-8b09-4b38996ac701" width=250>    <img src="https://github.com/Chaitanyaputhran/Bloombright/assets/109797633/8995c454-cf13-42ff-bd83-70bd779d0942" width=250> </p>
 <br>
