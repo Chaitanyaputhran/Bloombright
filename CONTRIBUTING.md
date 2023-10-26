@@ -21,6 +21,6 @@ If you encounter any issues or have suggestions for improvements, please open an
 
 ## Contact
 
-For any questions or concerns related to the contribution process, please reach out to us at [INSERT CONTACT INFORMATION HERE].
+For any questions or concerns related to the contribution process, please reach out to us at alriyatreeza929@gmail.com.
 
 Thank you for your interest in contributing to BloomBright and empowering women's health and well-being!
