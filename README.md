@@ -15,7 +15,7 @@
 
 ## Introduction
 
-<p align='justify'> BloomBright is a user-centric mobile application dedicated to facilitating women's comprehensive menstrual cycle management and overall well-being. Its intuitive interface enables effortless logging of cycle specifics, symptoms, and flow intensity, fostering a seamless tracking experience. By delivering tailored forecasts for forthcoming cycles, encompassing fertile windows and ovulation monitoring, BloomBright empowers women to assert authority over their menstrual health, fostering a sense of empowerment and control</p>
+<p align='justify'> BloomBright is a user-centric mobile application dedicated to facilitating women's comprehensive menstrual cycle management and overall well-being. Its intuitive interface enables effortless logging of cycle specifics, symptoms, and flow intensity, fostering a seamless tracking experience. By delivering tailored forecasts for forthcoming cycles, encompassing fertile windows and ovulation monitoring, BloomBright empowers women to assert authority over their menstrual health, fostering a sense of empowerment and control.</p>
 
 ## Features
 
