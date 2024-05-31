@@ -75,7 +75,6 @@ We would like to thank the following contributors for their valuable contributio
 - [Alriya Treeza D Souza](https://github.com/alriyadsouza)
 - [Chaitanya](https://github.com/Chaitanyaputhran)
 - [Ashal Pearl Dsouza](https://github.com/Ashaldsouza)
-- [Ishita Pathak](https://github.com/IshitaPathak)
 
 ## Contributing
 
