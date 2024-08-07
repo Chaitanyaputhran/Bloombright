@@ -81,4 +81,4 @@ We would like to thank the following contributors for their valuable contributio
 We welcome all contributions that improve BloomBright and the overall experience for our users. If you wish to contribute, please follow the guidelines outlined in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 
-Thank you for choosing BloomBright! We sincerely appreciate your trust in our app, and we  hope the app helps you take charge of your menstrual health and overall wellness.
+Thank you for choosing BloomBright! We sincerely appreciate your trust in our app, and we  hope the app helps you take charge of your menstrual health and overall wellness
